@@ -14,12 +14,6 @@
                     <li> <a href="#blog">Blog</a> </li>
                     <li> <a href="#connectme">Contact</a></li>
                 </ul>
-                <!-- <div class="social" v-show="!mobile">
-                    <li><a href="#"><fa icon="envelope-open-text" /></a></li>
-                    <li><a href="#"><fa :icon="['fab','instagram']" /></a></li>
-                    <li><a href="#"><fa :icon="['fab','google']" /></a></li>
-                    <li><a href="#"><fa :icon="['fab','facebook-f']" /></a></li>
-                </div> -->
                 <div class="icon">
                     <fa icon="bars" @click="toggleMobileNav" v-show="mobile" :class="{'icon-active': mobileNav}" />
                 </div>
@@ -173,9 +167,9 @@ header nav .dropdown-nav{
     width: 100%;
     max-width: 250px;
     height: 100%;
-    background-color: #DEE2E6;
+    background-color: #333232;
     top: 0;
-    right: 0;
+    left: 0;
     padding: 25px !important;
     text-align: center;
 }
@@ -192,8 +186,13 @@ header nav .dropdown-nav li{
     padding: 15px 0 !important;
 }
 header nav .dropdown-nav li a{
-    color: #000;
+    color: #fff;
     font-weight: bold;
+    transition: .5s ease all;
+}
+header nav .dropdown-nav li a:hover{
+    color: #ea4343;
+    transition: .5s ease all;
 }
 header nav .dropdown-nav li .link{
     color: #000;
@@ -218,7 +217,7 @@ header nav .dropdown-nav li .link{
 }
 .mobile-nav-enter-from,
 .mobile-nav-leave-to{
-    transform: translateX(250px);
+    transform: translateX(-250px);
 }
 .mobile-nav-enter-to{
     transform: translateX(0);

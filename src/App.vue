@@ -1,8 +1,10 @@
 <script>
+import mouseStyleVue from "./components/mouseStyle.vue";
 import HeaderStyleVue from "./components/HeaderStyle.vue";
 import introVue from "./components/intro.vue";
 export default{
   components:{
+    mouseStyleVue,
     HeaderStyleVue,
     introVue,
   }
@@ -10,6 +12,7 @@ export default{
 </script>
 
 <template>
+  <mouseStyleVue/>
   <HeaderStyleVue/>
   <introVue/>
 </template>

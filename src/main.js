@@ -14,6 +14,9 @@ library.add(fas, fab)
 
 import VueWriter from "vue-writer";
 
+
+
+
 const app = createApp(App);
 app.use(VueKinesis);
 createApp(App)

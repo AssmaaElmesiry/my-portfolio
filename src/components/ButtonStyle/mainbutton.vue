@@ -15,10 +15,16 @@ export default {
     width: auto;
     padding: 10px 20px;
     background-color: #ea4343;
-    border: 1px solid #ea4343;
+    border: 2px solid #ea4343;
+    border-radius: 10px;
+    transition: .5s ease all;
 }
-.mainbutton
 .mainbutton a {
-    color: #fff;
+    color: #fff !important;
+}
+.mainbutton:hover{
+    background-color: transparent;
+    transition: .5s ease all;
+
 }
 </style>
