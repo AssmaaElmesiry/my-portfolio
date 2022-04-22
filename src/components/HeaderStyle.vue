@@ -198,7 +198,7 @@ header nav .dropdown-nav li .link{
     color: #000;
 }
 .scrolled-nav{
-    background-color: #E4BC41;
+    background-color: #3c3c3c;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
     height: 100px;
     z-index: 99999999999999999;

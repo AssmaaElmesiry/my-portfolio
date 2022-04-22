@@ -145,8 +145,8 @@ export default{
     transform: translateY(-50%);
 }
 .intro .mask .social{
-    position: fixed;
-    left: 20px;
+    position: absolute;
+    left: -14%;
     top: 50%;
     height: 150px;
     display: flex;
