@@ -1,27 +1,44 @@
 <template>
-<section class="AboutMe">
+<section class="AboutMe" id="aboutme">
     <div class="container">
         <div class="mask row">
-            <div class="left col-md-4">
-                <img src="../assets/Aboutright.png" />
-            </div>
-            <div class="info col-md-4">
-                <div class="title">
-                    <span>About Me</span>
-                    <h2>I'm <span>Assmaa</span></h2>
-                    <h1>Web <span>Designer</span></h1>
-                    <p>Based in London,UK</p>
-                </div>
-                <div class="disc">
-                    <p>Hi! My name is Aali Walker. I am UI/UX designer, and I'm very passionate and dedicated to my work.</p>
-                    <p>With 20 years experience as a professional graphic designer and web developer, I have acquired the skills and knowledge necessary to make your project a success.</p>
-                </div>
-                <div class="download">
-                    <mainbutton class="mainbutton"> Download CV <fa icon="download" /></mainbutton>
+            <div class="col-md-3">
+                <div class="myphoto">
+                    <div class="right"></div>
+                    <img src="../assets/pic (2).jpg" alt="porfile pic" />
+                    <div class="left"></div>
                 </div>
             </div>
-            <div class="right col-md-4">
-                <img src="../assets/Aboutleft.jpg" />
+            <div class="col-md-8">
+                <div class="info">
+                    <div class="title">
+                        <span>About Me</span>
+                        <h2>I'm <span>Assmaa</span></h2>
+                        <h1>Web <span>Designer</span></h1>
+                    </div>
+                    <div class="disc">
+                        <p>Hi! My name is Aali Walker.  front-end web developer is responsible for implementing visual and interactive elements that users engage with through their web browser when using a web application. They are usually supported by back-end web developers, who are responsible for server-side application logic and integration of the work front-end developers do. </p>
+                    </div>
+                    <ul class="information">
+                        <li v-for="(value, key) in myInformation" :key="(value, key)">
+                            <fa :icon="['fa',value.icon]"/>
+                            <span> {{ key }}</span>
+                            <p> {{ value.info }} </p>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12  myInterests">
+                <h2>My Interests</h2>
+                <ul class="interests">
+                    <li v-for="value in myInterests">
+                        <fa :icon="['fas',value.icon]"/>
+                        {{value.item}}
+                    </li>
+                </ul>
+            </div>
+            <div class="download">
+                <mainbutton class="mainbutton"> Download CV <fa icon="download" /></mainbutton>
             </div>
         </div>
     </div>
@@ -30,6 +47,46 @@
 <script>
 import mainbutton from './ButtonStyle/mainbutton.vue'
 export default{
+    data() {
+        return {
+            myInformation:{
+                Name:{
+                    info:'Assmaa El-Mesiry',
+                    icon:'user'
+                },
+                Phone:{
+                    info: '01555209247',
+                    icon:'phone'
+                },
+                Email:{
+                    info: 'assmaaelmesiry@gmail.com',
+                    icon:'envelope-open-text'
+                },
+            },
+            myInterests:[
+                {
+                    icon: 'suitcase-rolling',
+                    item: 'Travel',
+                },
+                {
+                    icon: 'film',
+                    item: 'Movie',
+                },
+                {
+                    icon: 'seedling',
+                    item: 'yoga',
+                },
+                {
+                    icon: 'palette',
+                    item: 'Art',
+                },
+                {
+                    icon: 'code',
+                    item: 'coding',
+                },
+            ]
+        }
+    },
     components: {
         mainbutton,
     }
@@ -38,20 +95,135 @@ export default{
 
 <style scoped>
 .AboutMe{
-    padding: 150px 0;
+    padding: 100px 0;
     background-color: #3c3c3c;
+    height: 100%;
 }
 .AboutMe .mask{
     display: flex;
     justify-content: space-between;
-    height: 100vh;
 }
-.AboutMe .mask .right,.AboutMe .mask .left{
+.AboutMe .mask .myphoto{
+    width: 100%;
     position: relative;
 }
-.AboutMe .mask .right{
-    align-self: flex-end;
+.AboutMe .mask .myphoto .right:before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 90px;
+    background-color: #ea4343;
+    left: -15px;
+    top: -10px;
 }
+.AboutMe .mask .myphoto .right:after{
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    background-color: #ea4343;
+    left: -15px;
+    top: -12px;
+}
+.AboutMe .mask .myphoto .left:before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 90px;
+    background-color: #ea4343;
+    right: -15px;
+    bottom: -10px;
+}
+.AboutMe .mask .myphoto .left:after{
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    background-color: #ea4343;
+    right: -15px;
+    bottom: -12px;
+}
+.AboutMe .mask .myphoto img{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.AboutMe .mask .info{
+    align-self: center;
+}
+.AboutMe .mask .info .title span{
+    color: #ea4343;
+    font-size: 18px;
+}
+.AboutMe .mask .info .title h2, .AboutMe .mask .info .title h1{
+    font-size: 40px;
+    color: #fff;
+}
+.AboutMe .mask .info .title h2 span,.AboutMe .mask .info .title h1 span{
+    font-size: 40px;
+    color: #ea4343;
+    font-weight: bold;
+}
+.AboutMe .mask .info .title p {
+    color: #fff;
+    font-size: 25px;
+}
+.AboutMe .mask .info .disc p{
+    color: #b6b2bf;
+}
+.AboutMe .mask .info .information li{
+    display: flex;
+    align-items: baseline;
+    color: #b6b2bf;
+    font-size: 17px;
+}
+.AboutMe .mask .info .information li span{
+    font-weight: bold;
+    position: relative;
+    padding: 0 50px 0 20px;
+}
+.AboutMe .mask .info .information li p{
+    position: relative;
+}
+.AboutMe .mask .info .information li p::before{
+    position: absolute;
+    content: ":";
+    top: 0;
+    left: -25px;
+    color: #ea4343;
+}
+.AboutMe .mask .info .information li svg{
+    color: #ea4343;
+}
+.AboutMe .mask .download{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.myInterests{
+    padding-top: 40px;
+}
+.myInterests h2{
+    color: #fff;
+    padding-bottom: 15px;
+}
+.AboutMe .mask .interests{
+    display: flex;
+    justify-content: space-between;
+}
+.AboutMe .mask .interests li {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.AboutMe .mask .interests svg{
+    color: #ea4343;
+    font-size: 50px;
+    padding-bottom: 5px;
+}
+/*
 .AboutMe .mask .right::before{
     content: "";
     background-color: #fff;
@@ -119,32 +291,6 @@ export default{
     border-radius: 25px;
     z-index: 1;
 }
-.AboutMe .mask .info{
-    align-self: center;
-}
-.AboutMe .mask .info .title span{
-    color: #ea4343;
-    font-size: 18px;
-}
-.AboutMe .mask .info .title h2, .AboutMe .mask .info .title h1{
-    font-size: 40px;
-    color: #fff;
-}
-.AboutMe .mask .info .title h2 span,.AboutMe .mask .info .title h1 span{
-    font-size: 40px;
-    color: #ea4343;
-    font-weight: bold;
-}
-.AboutMe .mask .info .title p {
-    color: #fff;
-    font-size: 25px;
-}
-.AboutMe .mask .info .disc p{
-    color: #b6b2bf;
-}
-.AboutMe .mask .info .download{
-    display: flex;
-}
 
 
 
@@ -172,5 +318,5 @@ export default{
   to {
       top: 60%;
   }
-}
+} */
 </style>

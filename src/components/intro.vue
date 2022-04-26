@@ -146,7 +146,7 @@ export default{
 }
 .intro .mask .social{
     position: absolute;
-    left: -14%;
+    left: -7%;
     top: 50%;
     height: 150px;
     display: flex;
