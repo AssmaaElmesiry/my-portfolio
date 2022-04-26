@@ -87,7 +87,7 @@ export default{
     font-weight: bold;
 }
 .intro .mask .content h1{
-    color: #ea4343;
+    color: #45BEB7;
     font-size: 60px;
     font-weight: bold;
 }
@@ -159,7 +159,7 @@ export default{
     transition: all .3s ease;
 }
 .intro .mask .social svg:hover{
-    color: #ea4343;
+    color: #45BEB7;
     transition: all .3s ease;
 }
 /* Style About Kinesis Animation */
@@ -189,7 +189,7 @@ export default{
 }
 .intro .mask .kinesis-container  .kinesis-item2 .bgimage div:before{
     content: "";
-    border: 6px solid #ea4343;
+    border: 6px solid #45BEB7;
     width: 35%;
     height: 35%;
     position: absolute;
@@ -213,7 +213,7 @@ export default{
 }
 .intro .mask .kinesis-container  .kinesis-item3 .bgimage div:before{
     content: "";
-    background-color: #ea4343;
+    background-color: #45BEB7;
     width: 26%;
     height: 70%;
     position: absolute;

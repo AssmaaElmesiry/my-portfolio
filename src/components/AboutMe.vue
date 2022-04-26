@@ -31,7 +31,7 @@
             <div class="col-md-12  myInterests">
                 <h2>My Interests</h2>
                 <ul class="interests">
-                    <li v-for="value in myInterests">
+                    <li v-for="value in myInterests" :key="value">
                         <fa :icon="['fas',value.icon]"/>
                         {{value.item}}
                     </li>
@@ -112,7 +112,7 @@ export default{
     content: "";
     width: 2px;
     height: 90px;
-    background-color: #ea4343;
+    background-color: #45BEB7;
     left: -15px;
     top: -10px;
 }
@@ -121,7 +121,7 @@ export default{
     content: "";
     width: 90px;
     height: 2px;
-    background-color: #ea4343;
+    background-color: #45BEB7;
     left: -15px;
     top: -12px;
 }
@@ -130,7 +130,7 @@ export default{
     content: "";
     width: 2px;
     height: 90px;
-    background-color: #ea4343;
+    background-color: #45BEB7;
     right: -15px;
     bottom: -10px;
 }
@@ -139,7 +139,7 @@ export default{
     content: "";
     width: 90px;
     height: 2px;
-    background-color: #ea4343;
+    background-color: #45BEB7;
     right: -15px;
     bottom: -12px;
 }
@@ -153,7 +153,7 @@ export default{
     align-self: center;
 }
 .AboutMe .mask .info .title span{
-    color: #ea4343;
+    color: #45BEB7;
     font-size: 18px;
 }
 .AboutMe .mask .info .title h2, .AboutMe .mask .info .title h1{
@@ -162,7 +162,7 @@ export default{
 }
 .AboutMe .mask .info .title h2 span,.AboutMe .mask .info .title h1 span{
     font-size: 40px;
-    color: #ea4343;
+    color: #45BEB7;
     font-weight: bold;
 }
 .AboutMe .mask .info .title p {
@@ -191,10 +191,10 @@ export default{
     content: ":";
     top: 0;
     left: -25px;
-    color: #ea4343;
+    color: #45BEB7;
 }
 .AboutMe .mask .info .information li svg{
-    color: #ea4343;
+    color: #45BEB7;
 }
 .AboutMe .mask .download{
     display: flex;
@@ -219,7 +219,7 @@ export default{
     color: #fff;
 }
 .AboutMe .mask .interests svg{
-    color: #ea4343;
+    color: #45BEB7;
     font-size: 50px;
     padding-bottom: 5px;
 }
@@ -241,7 +241,7 @@ export default{
 }
 .AboutMe .mask .right::after{
     content: "";
-    border: 4px solid #ea4343;
+    border: 4px solid #45BEB7;
     position: absolute;
     bottom: -60px;
     left: -40px;
@@ -258,7 +258,7 @@ export default{
     content: "";
     position: absolute;
     width: 250px;
-    background-color: #ea4343;
+    background-color: #45BEB7;
     height: 250px;
     left: -53px;
     top: 15%;

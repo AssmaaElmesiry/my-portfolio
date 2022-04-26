@@ -14,8 +14,8 @@ export default {
 .mainbutton{
     width: auto;
     padding: 10px 20px;
-    background-color: #ea4343;
-    border: 2px solid #ea4343;
+    background-color: #45BEB7;
+    border: 2px solid #45BEB7;
     border-radius: 10px;
     transition: .5s ease all;
 }

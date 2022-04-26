@@ -127,7 +127,7 @@ header nav .navigation li a{
     transition: .5s ease all;
 }
 header nav .navigation li:hover a{
-    color: #ea4343;
+    color: #45BEB7;
     transition: .5s ease all;
 }
 header nav .social{
@@ -143,7 +143,7 @@ header nav .social li svg{
     font-size: 18px;
 }
 header nav a.router-link-exact-active {
-    color: #ea4343 !important;
+    color: #45BEB7 !important;
 }
 /* .icon{
     display: flex;
@@ -191,7 +191,7 @@ header nav .dropdown-nav li a{
     transition: .5s ease all;
 }
 header nav .dropdown-nav li a:hover{
-    color: #ea4343;
+    color: #45BEB7;
     transition: .5s ease all;
 }
 header nav .dropdown-nav li .link{
