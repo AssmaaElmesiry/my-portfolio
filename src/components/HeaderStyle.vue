@@ -125,10 +125,28 @@ header nav .navigation li a{
     color: #fff;
     font-size: 20px;
     transition: .5s ease all;
+    position: relative;
 }
 header nav .navigation li:hover a{
     color: #45BEB7;
-    transition: .5s ease all;
+    transition: .6s ease all;
+}
+header nav .navigation li a::before{
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: -3px;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: #45BEB7;
+}
+header nav .navigation li:hover a::before{
+    width: 100%;
+    left: 0;
+    right: auto;
+    bottom: -3px;
 }
 header nav .social{
     display: flex;

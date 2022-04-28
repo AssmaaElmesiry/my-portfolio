@@ -14,7 +14,7 @@
                 <kinesis-container class="kinesis-container">
                     <kinesis-element :strength="30" class="kinesis-item">
                         <div class="images">
-                            <img src="../assets/avatar.png" />
+                            <img src="../assets/test.png" />
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item2">
@@ -134,7 +134,7 @@ export default{
     top: 0;
     right: 0;
     bottom: 0;
-    width: 37%;
+    width: 45%;
     z-index: 1;
 }
 .intro .mask .images img{
@@ -190,11 +190,11 @@ export default{
 .intro .mask .kinesis-container  .kinesis-item2 .bgimage div:before{
     content: "";
     border: 6px solid #45BEB7;
-    width: 35%;
-    height: 35%;
+    width: 22%;
+    height: 19%;
     position: absolute;
-    top: 34%;
-    right: 95px;
+    top: 37%;
+    right: 26%;
 }
 .intro .mask .kinesis-container .kinesis-item3{
     width: 100%;
@@ -215,10 +215,10 @@ export default{
     content: "";
     background-color: #45BEB7;
     width: 26%;
-    height: 70%;
+    height: 25%;
     position: absolute;
-    top: 18%;
-    right: -30px;
+    bottom: 10%;
+    right: 0;
 }
 .intro .mask .kinesis-container .kinesis-item4{
     width: 100%;

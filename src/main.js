@@ -14,12 +14,17 @@ library.add(fas, fab)
 
 import VueWriter from "vue-writer";
 
+import KProgress from 'k-progress-v3';
 
-
+import VueTilt from 'vue-tilt.js'
 
 const app = createApp(App);
 app.use(VueKinesis);
+
+
 createApp(App)
     .component('fa', FontAwesomeIcon)
+    .component('k-progress', KProgress)
     .use(VueWriter)
+    .use(VueTilt)
     .mount('#app')

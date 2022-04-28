@@ -15,8 +15,10 @@
         "@luxdamore/vue-cursor-fx": "^1.6.2",
         "bootstrap": "^5.1.3",
         "jquery": "^3.6.0",
+        "k-progress-v3": "^1.0.0",
         "vue": "^3.2.33",
         "vue-kinesis": "^2.0.5",
+        "vue-tilt.js": "^1.1.1",
         "vue-writer": "^1.2.0"
     },
     "devDependencies": {

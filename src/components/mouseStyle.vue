@@ -58,7 +58,7 @@ export default{
   position: fixed;
   width: 30px;
   height: 30px;
-  border: 1px solid #45BEB7;
+  border: 1px solid #31a7a1;
   border-radius: 100%;
   z-index: 5555;
   backface-visibility: hidden;
@@ -73,7 +73,7 @@ export default{
   pointer-events: none;
   user-select: none;
   border-radius: 100%;
-  background: #45BEB7;
+  background: #31a7a1;
   z-index: 55555555;
   backface-visibility: hidden;
   will-change: transform;
