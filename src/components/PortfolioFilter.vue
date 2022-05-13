@@ -2,13 +2,13 @@
     <section class="Porfolio">
         <div class="container">
             <div class="filter">
-                <label><input type="radio" v-model="selectedCategory" value="All" /> All</label>
-                <label><input type="radio" v-model="selectedCategory" value="Coming Soon" /> Coming Soon</label>
-                <label><input type="radio" v-model="selectedCategory" value="Portfolio" /> Portfolio</label>
-                <label><input type="radio" v-model="selectedCategory" value="company" /> company</label>
+                <label><input type="radio"  v-model="selectedCategory" value="All" /> All</label>
+                <label><input type="radio"  v-model="selectedCategory" value="company" /> company</label>
+                <label><input type="radio"  v-model="selectedCategory" value="Coming Soon" /> Coming Soon</label>
+                <label><input type="radio"  v-model="selectedCategory" value="Portfolio" /> Portfolio</label>
             </div>
             <ul class="people-list">
-                <li v-for="project in filteredProject" v-tilt>
+                <li v-for="project in filteredProject" :key="project" v-tilt>
                     <img :src=" project.Image"/>
                     <span><a href="#"><fa :icon="['fa',project.link]"/></a></span>
                 </li>
@@ -42,6 +42,7 @@ export default {
 			
 			if(category === "All") {
 				return vm.projects;
+                
 			} else {
 				return vm.projects.filter(function(project) {
 					return project.category === category;
