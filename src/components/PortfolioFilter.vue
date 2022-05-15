@@ -2,13 +2,13 @@
     <section class="Porfolio">
         <div class="container">
             <div class="filter">
-                <label><input type="radio"  v-model="selectedCategory" value="All" /> All</label>
-                <label><input type="radio"  v-model="selectedCategory" value="company" /> company</label>
-                <label><input type="radio"  v-model="selectedCategory" value="Coming Soon" /> Coming Soon</label>
-                <label><input type="radio"  v-model="selectedCategory" value="Portfolio" /> Portfolio</label>
+                <label @click="activate(1)" :class="{ active : active_el == 1 }"><input type="radio"  v-model="selectedCategory" value="All" /> All</label>
+                <label @click="activate(2)" :class="{ active : active_el == 2 }"><input type="radio"  v-model="selectedCategory" value="Coming Soon" /> Coming Soon</label>
+                <label @click="activate(3)" :class="{ active : active_el == 3 }"><input type="radio"  v-model="selectedCategory" value="Portfolio" /> Portfolio</label>
+                <label @click="activate(4)" :class="{ active : active_el == 4 }"><input type="radio"  v-model="selectedCategory" value="company" /> company</label>
             </div>
             <ul class="people-list">
-                <li v-for="project in filteredProject" :key="project" v-tilt>
+                <li v-for="project in filteredProject" :key="project">
                     <img :src=" project.Image"/>
                     <span><a href="#"><fa :icon="['fa',project.link]"/></a></span>
                 </li>
@@ -21,20 +21,20 @@ export default {
     data() {
         return {
             projects: [
-			{ Image: ("../src/assets/1.png"), category: "company", link:"link"},
-			{ Image: ("../src/assets/2.png"), category: "company", link:"link"},
-			{ Image: ("../src/assets/3.png"), category: "company", link:"link"},
-			{ Image: ("../src/assets/4.png"), category: "Portfolio", link:"link"},
-			{ Image: ("../src/assets/1.png"), category: "Portfolio", link:"link"},
-			{ Image: ("../src/assets/2.png"), category: "Portfolio", link:"link"},
-			{ Image: ("../src/assets/3.png"), category: "Fictional", link:"link"},
-			{ Image: ("../src/assets/4.png"), category: "Fictional", link:"link"},
-			{ Image: ("../src/assets/2.png"), category: "Coming Soon", link:"link"}
+                { Image: ("../src/assets/1.png"), category: "company", link:"link"},
+                { Image: ("../src/assets/2.png"), category: "company", link:"link"},
+                { Image: ("../src/assets/3.png"), category: "company", link:"link"},
+                { Image: ("../src/assets/4.png"), category: "Portfolio", link:"link"},
+                { Image: ("../src/assets/1.png"), category: "Portfolio", link:"link"},
+                { Image: ("../src/assets/2.png"), category: "Portfolio", link:"link"},
+                { Image: ("../src/assets/3.png"), category: "Fictional", link:"link"},
+                { Image: ("../src/assets/4.png"), category: "Fictional", link:"link"},
+                { Image: ("../src/assets/2.png"), category: "Coming Soon", link:"link"}
             ],
-            selectedCategory: "All"
-            }
-            
-        },
+            selectedCategory: "All",
+            active_el: 1,
+        }
+    },
 	computed: {
 		filteredProject: function() {
 			var vm = this;
@@ -50,6 +50,11 @@ export default {
 			}
 		}
 	},
+    methods: {
+        activate:function(el){
+            this.active_el = el;
+        }
+    },
 }
 </script>
 <style>
@@ -68,6 +73,10 @@ export default {
     margin-bottom: 20px;
 }
 .Porfolio .filter label:hover{
+    color: #45BEB7;
+    transition: .6s ease all;
+}
+.Porfolio .filter label.active{
     color: #45BEB7;
     transition: .6s ease all;
 }

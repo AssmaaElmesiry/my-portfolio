@@ -44,7 +44,7 @@
                     <div class="mask">
                         <fa class="vue" :icon="['fab','vuejs']" />
                         <h2>vuejs</h2>
-                        <k-progress :percent="percent" color="#3fb984" :show-text="false"></k-progress>
+                        <k-progress :percent="80" color="#3fb984" :show-text="false"></k-progress>
                     </div>
                 </div>
             </div>
@@ -55,18 +55,7 @@
 export default{
     data() {
         return {
-            percent: 10,
-            ifUp: true,
         }
-    },
-    mounted () {
-      const timer = setInterval(() =>{
-        if (this.ifUp) {
-          this.percent = this.percent + 10
-          this.percent == 70 ? this.ifUp = false : this.ifUp = true
-        }
-      }, 1000);
-      this.$once('hook:beforeDestroy', () => clearInterval(timer));
     },
 }
 </script>

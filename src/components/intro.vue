@@ -93,7 +93,7 @@ export default{
 }
 .intro .mask .content h2{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     color: #fff;
 }
 .intro .mask .content .buttons{

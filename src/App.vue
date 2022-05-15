@@ -5,6 +5,7 @@ import introVue from "./components/intro.vue";
 import AboutMeVue from "./components/AboutMe.vue";
 import MySkillVue from "./components/MySkill.vue";
 import PortfolioFilterVue from "./components/PortfolioFilter.vue";
+import MyServicesVue from "./components/MyServices.vue";
 export default{
   components:{
     mouseStyleVue,
@@ -13,6 +14,7 @@ export default{
     AboutMeVue,
     MySkillVue,
     PortfolioFilterVue,
+    MyServicesVue,
   }
 }
 </script>
@@ -24,6 +26,7 @@ export default{
   <AboutMeVue/>
   <MySkillVue/>
   <PortfolioFilterVue/>
+  <MyServicesVue/>
 </template>
 
 <style>
