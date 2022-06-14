@@ -1,15 +1,15 @@
 <template>
-<section class="AboutMe" id="aboutme">
-    <div class="container">
-        <div class="mask row">
-            <div class="col-md-3">
+<section class="AboutMe py-24 px-0 bg-bgsection h-full" id="aboutme">
+    <div class="container mx-auto px-4">
+        <div class="mask flex md:flex-row flex-col justify-between">
+            <div class="md:w-1/2 w-full">
+            <img src="../assets/mee.webp" alt="porfile pic" />
                 <div class="myphoto">
-                    <div class="right"></div>
-                    <img src="../assets/pic (2).jpg" alt="porfile pic" />
-                    <div class="left"></div>
+                    
                 </div>
+                
             </div>
-            <div class="col-md-8">
+            <div class="md:w-1/2 w-full">
                 <div class="info">
                     <div class="title">
                         <span>About Me</span>
@@ -28,18 +28,18 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-12  myInterests">
-                <h2>My Interests</h2>
-                <ul class="interests">
-                    <li v-for="value in myInterests" :key="value">
-                        <fa :icon="['fas',value.icon]"/>
-                        {{value.item}}
-                    </li>
-                </ul>
-            </div>
-            <div class="download">
-                <mainbutton class="mainbutton"> Download CV <fa icon="download" /></mainbutton>
-            </div>
+        </div>
+        <div class="col-md-12  myInterests">
+            <h2>My Interests</h2>
+            <ul class="interests">
+                <li v-for="value in myInterests" :key="value">
+                    <fa :icon="['fas',value.icon]"/>
+                    {{value.item}}
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <mainbutton class="mainbutton"> Download CV <fa icon="download" /></mainbutton>
         </div>
     </div>
 </section>
@@ -94,60 +94,12 @@ export default{
 </script>
 
 <style scoped>
-.AboutMe{
-    padding: 100px 0;
-    background-color: #3c3c3c;
-    height: 100%;
-}
-.AboutMe .mask{
-    display: flex;
-    justify-content: space-between;
-}
 .AboutMe .mask .myphoto{
     width: 100%;
     position: relative;
 }
-.AboutMe .mask .myphoto .right:before{
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 90px;
-    background-color: #45BEB7;
-    left: -15px;
-    top: -10px;
-}
-.AboutMe .mask .myphoto .right:after{
-    position: absolute;
-    content: "";
-    width: 90px;
-    height: 2px;
-    background-color: #45BEB7;
-    left: -15px;
-    top: -12px;
-}
-.AboutMe .mask .myphoto .left:before{
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 90px;
-    background-color: #45BEB7;
-    right: -15px;
-    bottom: -10px;
-}
-.AboutMe .mask .myphoto .left:after{
-    position: absolute;
-    content: "";
-    width: 90px;
-    height: 2px;
-    background-color: #45BEB7;
-    right: -15px;
-    bottom: -12px;
-}
-.AboutMe .mask .myphoto img{
-    width: 100%;
-    height: 100%;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+.myphoto{
+    background-image: url('../assets/frame.png');
 }
 .AboutMe .mask .info{
     align-self: center;

@@ -1,6 +1,6 @@
 <template>
     <section class="MySkills">
-        <div class="container">
+        <div class="container mx-auto px-4">
             <div class="title">
                 <h2>My Skills</h2>
             </div>

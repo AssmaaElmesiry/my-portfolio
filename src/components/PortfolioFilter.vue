@@ -1,6 +1,6 @@
 <template>
     <section class="Porfolio">
-        <div class="container">
+        <div class="container mx-auto px-4">
             <div class="filter">
                 <label @click="activate(1)" :class="{ active : active_el == 1 }"><input type="radio"  v-model="selectedCategory" value="All" /> All</label>
                 <label @click="activate(2)" :class="{ active : active_el == 2 }"><input type="radio"  v-model="selectedCategory" value="Coming Soon" /> Coming Soon</label>

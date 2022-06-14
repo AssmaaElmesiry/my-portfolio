@@ -1,20 +1,20 @@
 <template>
-    <section class="intro">
-        <div class="container">
-            <div class="mask">
-                <div class="content">
-                    <P>Hello, I'm</P>
-                    <h1>Assmaa</h1>
-                    <h2> Creative <VueWriter :array="arr" /></h2>
-                    <div class="buttons">
-                        <mainbutton class="mainbutton"> Say Hello <fa icon="envelope-open-text" /></mainbutton>
-                        <a href="#" class="about">About Me</a>
+    <section class="intro w-full h-screen relative bg-bgHeader">
+        <div class="container mx-auto px-4">
+            <div class="mask w-full h-screen relative">
+                <div class="content absolute w-1/2 top-1/2 z-10 transform -translate-y-1/2">
+                    <P class="text-white text-xl font-bold">Hello, I'm</P>
+                    <h1 class="text-6xl text-mainColor font-bold my-3">Assmaa</h1>
+                    <h2 class="text-white flex items-end sm:text-5xl text-4xl"> Creative <VueWriter :array="arr" /></h2>
+                    <div class="buttons flex items-center mt-9">
+                        <mainbutton class="ml-2"> Say Hello <fa icon="envelope-open-text" class="pl-4" /></mainbutton>
+                        <a href="#" class="about text-white inline-block relative ml-6 transition ease-in duration-300">About Me</a>
                     </div>
                 </div>
-                <kinesis-container class="kinesis-container">
+                <kinesis-container class="kinesis-container w-full h-full flex">
                     <kinesis-element :strength="30" class="kinesis-item">
-                        <div class="images">
-                            <img src="../assets/test.png" />
+                        <div class="images absolute top-0 right-0 bottom-0 w-1/2 z-10">
+                            <img src="../assets/test2.png" class="w-full h-auto absolute top-1/2 transform -translate-y-1/2" />
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item2">
@@ -33,11 +33,11 @@
                         </div>
                     </kinesis-element>
                 </kinesis-container>
-                <ul class="social">
-                    <li><a href="#"><fa icon="envelope-open-text" /></a></li>
-                    <li><a href="#"><fa :icon="['fab','instagram']" /></a></li>
-                    <li><a href="#"><fa :icon="['fab','google']" /></a></li>
-                    <li><a href="#"><fa :icon="['fab','facebook-f']" /></a></li>
+                <ul class="social absolute md:-left-14 right-0 md:top-1/2 top-3/4 h-36 flex flex-col justify-between ">
+                    <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" icon="envelope-open-text" /></a></li>
+                    <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','instagram']" /></a></li>
+                    <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','google']" /></a></li>
+                    <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','facebook-f']" /></a></li>
                 </ul>
             </div>
         </div>
@@ -50,7 +50,7 @@ import mainbutton from './ButtonStyle/mainbutton.vue'
 export default{
     data() {
         return {
-            arr: [" Designer ", " Developer ", " Freelancer"]
+            arr: [" Front-End ", " Freelancer"]
         }
     },
     components: {
@@ -63,56 +63,7 @@ export default{
 }
 </script>
 <style scoped>
-.intro{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: #333232;
-}
-.intro .mask{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-.intro .mask .content{
-    position: absolute;
-    width: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-.intro .mask .content p{
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-}
-.intro .mask .content h1{
-    color: #45BEB7;
-    font-size: 60px;
-    font-weight: bold;
-}
-.intro .mask .content h2{
-    display: flex;
-    align-items: flex-end;
-    color: #fff;
-}
-.intro .mask .content .buttons{
-    display: flex;
-    align-items: center;
-    margin-top: 35px;
-}
-.intro .mask .content .buttons  svg {
-    padding-left: 15px;
-}
-.intro .mask .content .buttons .about{
-  color: #fff;
-  white-space: nowrap;
-  display: inline-block;
-  position: relative;
-  transition: all .3s ease;
-  margin-left: 25px;
-}
-.intro .mask .content .buttons .about::before{
+.about::before{
     content: "";
     width: 0;
     height: 1px;
@@ -123,51 +74,13 @@ export default{
     transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
     background: #fff;
 }
-.intro .mask .content .buttons .about:hover::before{
+.about:hover::before{
     width: 100%;
     left: 0;
     right: auto;
     bottom: -3px;
 }
-.intro .mask .images{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 45%;
-    z-index: 1;
-}
-.intro .mask .images img{
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.intro .mask .social{
-    position: absolute;
-    left: -7%;
-    top: 50%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.intro .mask .social svg{
-    color: #fff;
-    font-size: 20px;
-    transition: all .3s ease;
-}
-.intro .mask .social svg:hover{
-    color: #45BEB7;
-    transition: all .3s ease;
-}
 /* Style About Kinesis Animation */
-.intro .mask .kinesis-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
 .intro .mask .kinesis-container .kinesis-item{
     width: 100%;
     height: 100%;
@@ -189,12 +102,12 @@ export default{
 }
 .intro .mask .kinesis-container  .kinesis-item2 .bgimage div:before{
     content: "";
-    border: 6px solid #45BEB7;
-    width: 22%;
-    height: 19%;
+    border: 6px dotted #45BEB7;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 37%;
-    right: 26%;
+    top: 45%;
+    right: 40%;
 }
 .intro .mask .kinesis-container .kinesis-item3{
     width: 100%;
@@ -213,12 +126,12 @@ export default{
 }
 .intro .mask .kinesis-container  .kinesis-item3 .bgimage div:before{
     content: "";
-    background-color: #45BEB7;
-    width: 26%;
-    height: 25%;
+    border: 6px double #45BEB7;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    bottom: 10%;
-    right: 0;
+    bottom: 36%;
+    right: 7%;
 }
 .intro .mask .kinesis-container .kinesis-item4{
     width: 100%;
@@ -238,20 +151,19 @@ export default{
 .intro .mask .kinesis-container  .kinesis-item4 .bgimage div:before{
     content: "";
     border: 6px solid #fff;
-    width: 11%;
-    height: 18%;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    top: 10%;
-    right: -74px;
+    top: 25%;
+    right: 1%;
 }
 /* Style About Vue Writer */
-.intro .mask .content h2 .is-typed {
-  color: #fff !important;
+.is-typed {
+  color: #45BEB7;
   padding-left: 10px;
   font-size: 40px;
-
 }
-.intro .mask .content h2 .is-typed >span{
+.is-typed >span{
   font-weight: bold !important;
 }
 /* Responsive */
