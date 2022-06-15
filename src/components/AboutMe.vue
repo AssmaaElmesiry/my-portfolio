@@ -2,44 +2,42 @@
 <section class="AboutMe py-24 px-0 bg-bgsection h-full" id="aboutme">
     <div class="container mx-auto px-4">
         <div class="mask flex md:flex-row flex-col justify-between">
-            <div class="md:w-1/2 w-full">
-            <img src="../assets/mee.webp" alt="porfile pic" />
-                <div class="myphoto">
-                    
+            <div class="md:w-1/2 w-full flex justify-center items-center">  
+                <div class="myphoto w-72 filter grayscale hover:filter hover:grayscale-0 transition ease-in duration-300">
+                    <img src="../assets/frame.png" class="transform rotate-12 hover:rotate-0 transition ease-in duration-300" alt="porfile pic" />
                 </div>
-                
             </div>
             <div class="md:w-1/2 w-full">
-                <div class="info">
+                <div class="self-center">
                     <div class="title">
-                        <span>About Me</span>
-                        <h2>I'm <span>Assmaa</span></h2>
-                        <h1>Web <span>Designer</span></h1>
+                        <span class="text-mainColor text-sm font-bold">About Me</span>
+                        <h2 class="text-4xl text-white">I'm <span class="text-mainColor font-bold">Assmaa</span></h2>
+                        <h1 class="text-5xl text-white">Web <span class="text-mainColor font-bold">Designer</span></h1>
                     </div>
-                    <div class="disc">
-                        <p>Hi! My name is Aali Walker.  front-end web developer is responsible for implementing visual and interactive elements that users engage with through their web browser when using a web application. They are usually supported by back-end web developers, who are responsible for server-side application logic and integration of the work front-end developers do. </p>
+                    <div class=" my-5">
+                        <p class="text-justify text-white text-base">Hi! My name is Assmaa El-Mesiry. front-end web developer is responsible for implementing visual and interactive elements that users engage with through their web browser when using a web application. They are usually supported by back-end web developers, who are responsible for server-side application logic and integration of the work front-end developers do. </p>
                     </div>
-                    <ul class="information">
-                        <li v-for="(value, key) in myInformation" :key="(value, key)">
-                            <fa :icon="['fa',value.icon]"/>
-                            <span> {{ key }}</span>
-                            <p> {{ value.info }} </p>
+                    <ul class="information flex flex-col text-white">
+                        <li v-for="(value, key) in myInformation" :key="(value, key)" class="flex items-baseline text-gray text-base">
+                            <fa :icon="['fa',value.icon]" class="text-mainColor"/>
+                            <span class="font-bold relative pr-12 pl-5"> {{ key }}</span>
+                            <p class="relative desc"> {{ value.info }} </p>
                         </li> 
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="col-md-12  myInterests">
-            <h2>My Interests</h2>
-            <ul class="interests">
-                <li v-for="value in myInterests" :key="value">
-                    <fa :icon="['fas',value.icon]"/>
+        <div class="my-28">
+            <h2 class="text-xl font-bold text-mainColor mb-4"> My Interests</h2>
+            <ul class="interests flex sm:flex-row sm:justify-between flex-col">
+                <li v-for="value in myInterests" :key="value" class="border-4 border-double border-white flex flex-col p-6 text-white text-center mb-3">
+                    <fa :icon="['fas',value.icon]" class="text-5xl text-mainColor"/>
                     {{value.item}}
                 </li>
             </ul>
         </div>
-        <div class="download">
-            <mainbutton class="mainbutton"> Download CV <fa icon="download" /></mainbutton>
+        <div class="flex justify-center my-14">
+            <a :href="CV" target="_blank" ><mainbutton class="mainbutton" > Download CV <fa icon="download" /></mainbutton></a>
         </div>
     </div>
 </section>
@@ -49,6 +47,7 @@ import mainbutton from './ButtonStyle/mainbutton.vue'
 export default{
     data() {
         return {
+            CV: ('../../src/assets/Cv.pdf'),
             myInformation:{
                 Name:{
                     info:'Assmaa El-Mesiry',
@@ -56,11 +55,11 @@ export default{
                 },
                 Phone:{
                     info: '01555209247',
-                    icon:'phone'
+                    icon:'phone',
                 },
                 Email:{
                     info: 'assmaaelmesiry@gmail.com',
-                    icon:'envelope-open-text'
+                    icon:'envelope-open-text',
                 },
             },
             myInterests:[
@@ -89,186 +88,29 @@ export default{
     },
     components: {
         mainbutton,
-    }
+    },
 }
 </script>
 
 <style scoped>
-.AboutMe .mask .myphoto{
-    width: 100%;
-    position: relative;
-}
-.myphoto{
-    background-image: url('../assets/frame.png');
-}
-.AboutMe .mask .info{
-    align-self: center;
-}
-.AboutMe .mask .info .title span{
-    color: #45BEB7;
-    font-size: 18px;
-}
-.AboutMe .mask .info .title h2, .AboutMe .mask .info .title h1{
-    font-size: 40px;
-    color: #fff;
-}
-.AboutMe .mask .info .title h2 span,.AboutMe .mask .info .title h1 span{
-    font-size: 40px;
-    color: #45BEB7;
-    font-weight: bold;
-}
-.AboutMe .mask .info .title p {
-    color: #fff;
-    font-size: 25px;
-}
-.AboutMe .mask .info .disc p{
-    color: #b6b2bf;
-}
-.AboutMe .mask .info .information li{
-    display: flex;
-    align-items: baseline;
-    color: #b6b2bf;
-    font-size: 17px;
-}
-.AboutMe .mask .info .information li span{
-    font-weight: bold;
-    position: relative;
-    padding: 0 50px 0 20px;
-}
-.AboutMe .mask .info .information li p{
-    position: relative;
-}
-.AboutMe .mask .info .information li p::before{
+.desc::before{
+    content: ":" !important;
     position: absolute;
-    content: ":";
     top: 0;
     left: -25px;
     color: #45BEB7;
 }
-.AboutMe .mask .info .information li svg{
-    color: #45BEB7;
-}
-.AboutMe .mask .download{
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-}
-.myInterests{
-    padding-top: 40px;
-}
-.myInterests h2{
-    color: #fff;
-    padding-bottom: 15px;
-}
-.AboutMe .mask .interests{
-    display: flex;
-    justify-content: space-between;
-}
-.AboutMe .mask .interests li {
-    font-size: 25px;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-}
-.AboutMe .mask .interests svg{
-    color: #45BEB7;
-    font-size: 50px;
-    padding-bottom: 5px;
-}
-/*
-.AboutMe .mask .right::before{
+.myphoto::before{
     content: "";
-    background-color: #fff;
+    background-image: url("../assets/mee.webp");
     position: absolute;
-    top: -60px;
-    right: -40px;
-    width: 150px;
-    height: 150px;
-    border-radius: 25px;
-    animation-name: my-animation-6cb1b4f6;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    top: 2px;
+    left: 34px;
+    width: 80%;
+    height: 99%;
+    background-size: cover;
 }
-.AboutMe .mask .right::after{
-    content: "";
-    border: 4px solid #45BEB7;
-    position: absolute;
-    bottom: -60px;
-    left: -40px;
-    width: 150px;
-    height: 150px;
-    border-radius: 25px;
-    animation-name: my-animation3;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+.myphoto:hover{
+    filter: none;
 }
-.AboutMe .mask .left:before{
-    content: "";
-    position: absolute;
-    width: 250px;
-    background-color: #45BEB7;
-    height: 250px;
-    left: -53px;
-    top: 15%;
-    border-radius: 25px;
-    animation-name: my-animation2;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-.AboutMe .mask .left::after{
-    content: "";
-    position: absolute;
-    width: 150px;
-    border: 6px solid #fff;
-    height: 150px;
-    right: 30px;
-    top: -30px;
-    border-radius: 25px;
-    animation-name: my-animation-6cb1b4f6;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.AboutMe .mask .left img,.AboutMe .mask .right img {
-    width: 100%;
-    height: auto;
-    border-radius: 25px;
-    z-index: 1;
-}
-
-
-
-
-@keyframes my-animation {
-  from {
-    width: 250px;
-  }
-  to {
-    width: 150px;
-  }
-}
-@keyframes my-animation2 {
-  from {
-    top: 20%;
-  }
-  to {
-      top: 30%;
-  }
-}
-@keyframes my-animation3 {
-  from {
-    top: 40%;
-  }
-  to {
-      top: 60%;
-  }
-} */
 </style>

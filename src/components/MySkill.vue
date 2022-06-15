@@ -1,49 +1,56 @@
 <template>
-    <section class="MySkills">
+    <section class="bg-bgsection">
         <div class="container mx-auto px-4">
-            <div class="title">
-                <h2>My Skills</h2>
+            <div class="title py-6">
+                <h2 class="text-white text-center text-5xl font-bold">My Skills</h2>
             </div>
-            <div class="row">
-                <div class="col-md-3 item">
-                    <div class="mask">
-                        <fa class="html" :icon="['fab','html5']" />
-                        <h2> Html </h2>
+            <div class="flex xl:justify-between items-center sm:flex-wrap sm:flex-row flex-col">
+                <div class="mb-6 sm:w-1/6 w-full">
+                    <div class="flex justify-center flex-col">
+                        <fa class="text-html text-6xl" :icon="['fab','html5']" />
+                        <h2 class="text-white text-center mb-1 text-gray"> Html </h2>
                         <k-progress :percent="100" color="#e54c21" :show-text="false"></k-progress>
                     </div>
                 </div>
-                <div class="col-md-3 item">
-                    <div class="mask">
-                        <fa class="css" :icon="['fab','css3-alt']" />
-                        <h2> Css </h2>
+                <div class="mb-6 sm:w-1/6 w-full">
+                    <div class="flex justify-center flex-col">
+                        <fa class="text-css text-6xl" :icon="['fab','css3-alt']" />
+                        <h2 class="text-white text-center mb-1 text-gray"> Css </h2>
                         <k-progress :percent="100" color="#248cc9" :show-text="false"></k-progress>
                     </div>
                 </div>
-                <div class="col-md-3 item">
-                    <div class="mask">
-                        <fa class="sass" :icon="['fab','sass']" />
-                        <h2>Sass</h2>
+                <div class="mb-6 sm:w-1/6 w-full">
+                    <div class="flex justify-center flex-col">
+                        <fa class="text-sass text-6xl" :icon="['fab','sass']" />
+                        <h2 class="text-white text-center mb-1 text-gray">Sass</h2>
                         <k-progress :percent="100" color="#ce679a" :show-text="false"></k-progress>
                     </div>
                 </div>
-                <div class="col-md-3 item">
-                    <div class="mask">
-                        <fa class="js" :icon="['fab','js']" />
-                        <h2>Js</h2>
+                <div class="mb-6 sm:w-1/6 w-full">
+                    <div class="flex justify-center flex-col">
+                        <fa class="text-js text-6xl" :icon="['fab','js']" />
+                        <h2 class="text-white text-center mb-1 text-gray">Js</h2>
                         <k-progress :percent="70" color="#f7e018" :show-text="false"></k-progress>
                     </div>
                 </div>
-                <div class="col-md-3 item">
-                    <div class="mask">
-                        <fa class="bootstrap" :icon="['fab','bootstrap']" />
-                        <h2>Bootstrap</h2>
+                <div class="mb-6 sm:w-1/6 w-full">
+                    <div class="flex justify-center flex-col">
+                        <fa class="text-bootstrap text-6xl" :icon="['fab','bootstrap']" />
+                        <h2 class="text-white text-center mb-1 text-gray">Bootstrap</h2>
                         <k-progress :percent="100" color="#9466dc" :show-text="false"></k-progress>
                     </div>
                 </div>
-                <div class="col-md-3 item">
-                    <div class="mask">
-                        <fa class="vue" :icon="['fab','vuejs']" />
-                        <h2>vuejs</h2>
+                <div class="mb-6 sm:w-1/6 w-full">
+                    <div class="flex justify-center flex-col">
+                        <div class="w-full h-16 flex justify-center items-center"><img class="w-11" :src="tailwind" /></div>
+                        <h2 class="text-white text-center mb-1 text-gray">TailwindCss</h2>
+                        <k-progress :percent="100" color="#0ea5e9" :show-text="false"></k-progress>
+                    </div>
+                </div>
+                <div class="mb-6 sm:w-1/6 w-full">
+                    <div class="flex justify-center flex-col">
+                        <fa class="text-vuejs text-6xl" :icon="['fab','vuejs']" />
+                        <h2 class="text-white text-center mb-1 text-gray">vuejs</h2>
                         <k-progress :percent="80" color="#3fb984" :show-text="false"></k-progress>
                     </div>
                 </div>
@@ -53,42 +60,16 @@
 </template>
 <script>
 export default{
+  methods: {
+  },
     data() {
         return {
+            tailwind: ('../src/assets/tailwind.png'),
         }
     },
 }
 </script>
 <style>
-.MySkills{
-    background-color: #3c3c3c;
-}
-.MySkills .item{
-    padding-bottom: 25px;
-}
-.MySkills .title{
-    padding: 25px 0;
-}
-.MySkills .title h2{
-    color: #fff;
-    text-align: center;
-    font-size: 45px;
-    font-weight: bold;
-}
-.MySkills .mask{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.MySkills .mask h2{
-    text-align: center;
-    color: #b6b2bf;
-    padding-bottom: 5px;
-}
-.MySkills .mask svg{
-    font-size: 75px;
-    padding-bottom:  5px;
-}
 .MySkills .mask .k-progress{
     display: flex;
     justify-content: center;
@@ -110,5 +91,9 @@ export default{
 }
 .MySkills .mask .vue{
     color: #3fb984;
+}
+.k-progress-outer{
+    margin: 0 !important;
+    padding: 0 !important;
 }
 </style>

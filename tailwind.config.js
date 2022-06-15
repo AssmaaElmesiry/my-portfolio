@@ -14,6 +14,16 @@ module.exports = {
                 'bgHeader': '#333232',
                 'mainColor': ' #45BEB7',
                 'bgsection': '#3c3c3c',
+                'gray': 'b6b2bf',
+                'html': '#e54c21',
+                'css': '#248cc9',
+                'sass': '#ce679a',
+                'bootstrap': '#9466dc',
+                'vuejs': '#3fb984',
+                'js': '#f7e018',
+            },
+            Height: {
+                'tailwindH': '61px'
             }
         },
     },
