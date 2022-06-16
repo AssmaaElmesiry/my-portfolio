@@ -4,7 +4,7 @@ import HeaderStyleVue from "./components/HeaderStyle.vue";
 import introVue from "./components/intro.vue";
 import AboutMeVue from "./components/AboutMe.vue";
 import MySkillVue from "./components/MySkill.vue";
-import PortfolioFilterVue from "./components/PortfolioFilter.vue";
+import ProjectsVue from "./components/Projects.vue";
 import MyServicesVue from "./components/MyServices.vue";
 export default{
   components:{
@@ -13,7 +13,7 @@ export default{
     introVue,
     AboutMeVue,
     MySkillVue,
-    PortfolioFilterVue,
+    ProjectsVue,
     MyServicesVue,
   }
 }
@@ -25,7 +25,7 @@ export default{
   <introVue/>
   <AboutMeVue/>
   <MySkillVue/>
-  <PortfolioFilterVue/>
+  <ProjectsVue/>
   <MyServicesVue/>
 </template>
 

@@ -22,8 +22,10 @@ module.exports = {
                 'vuejs': '#3fb984',
                 'js': '#f7e018',
             },
-            Height: {
-                'tailwindH': '61px'
+            Heights: {
+                'item': '59.2',
+
+
             }
         },
     },
