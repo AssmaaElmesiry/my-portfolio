@@ -32,39 +32,57 @@
                 </label>
             </div>
             <ul class="people-list flex flex-wrap justify-center w-full h-full ">
-                <li v-for="project in filteredProject" :key="project" class="relative overflow-hidden w-80 h-80 p-3 transition-all ease-in-out duration-700">
+                <li v-for="project in filteredProject" :key="project.id" class="relative overflow-hidden w-80 h-80 p-3 transition-all ease-in-out duration-700">
                     <img :src=" project.Image" class="w-full"/>
                     <div class="text w-full px-3 text-center absolute top-0 left-1/2 transform -translate-x-2/4  opacity-0 transition-all ease-in-out duration-700">
                         <h2 class="text-white text-3xl">{{project.ProjectName}}</h2>
                         <p class="text-mainColor">{{project.title}}</p>
                     </div>
-                    <div class="more opacity-0 text-center bottom-0 left-0 w-full flex justify-center absolute transition-all ease-in-out duration-700"><mainbuttonVue>LEARN MORE</mainbuttonVue></div>
+                    <div class="more opacity-0 text-center bottom-0 left-0 w-full flex justify-center absolute transition-all ease-in-out duration-700" >
+                        <mainbuttonVue id="showModal1" @click="showModal1 = true">LEARN MORE</mainbuttonVue>
+                    </div>
                 </li>
             </ul>
+            <Teleport to="body">
+                <!-- use the modal component, pass in the prop -->
+                <ModalVue :show="showModal1" @close="showModal1 = false">
+                    <template #header>
+                        <h3>custom header</h3>
+                    </template>
+                    <template #body>
+                        <h3>jdfhkdjfhdkfjh</h3>
+                    </template>
+                </ModalVue>
+                
+            </Teleport>
+            
         </div>
     </div>
 </template>
 <script>
 import mainbuttonVue from './ButtonStyle/mainbutton.vue';
+import ModalVue from './Modal.vue';
 export default {
     data() {
         return {
             projects: [
-                { Image: ("../src/assets/1.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
-                { Image: ("../src/assets/2.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
-                { Image: ("../src/assets/3.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
-                { Image: ("../src/assets/4.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
-                { Image: ("../src/assets/1.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
-                { Image: ("../src/assets/2.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
-                { Image: ("../src/assets/3.png"), 'ProjectName': 'asasas', title: 'Vuejs + bootstrap', category: "Framework", link:"link"},
-                { Image: ("../src/assets/4.png"), 'ProjectName': 'asasas', title: 'Vuejs + tailwindCSS', category: "Framework", link:"link"},
+                {id:1, Image: ("../src/assets/1.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
+                {id:2, Image: ("../src/assets/2.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
+                {id:3, Image: ("../src/assets/3.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
+                {id:4, Image: ("../src/assets/4.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
+                {id:5, Image: ("../src/assets/1.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
+                {id:6, Image: ("../src/assets/2.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
+                {id:7, Image: ("../src/assets/3.png"), 'ProjectName': 'asasas', title: 'Vuejs + bootstrap', category: "Framework", link:"link"},
+                {id:8, Image: ("../src/assets/4.png"), 'ProjectName': 'asasas', title: 'Vuejs + tailwindCSS', category: "Framework", link:"link"},
             ],
             selectedCategory: "All",
             active_el: 1,
+            showModal1: false
         }
     },
     components:{
         mainbuttonVue,
+        ModalVue,
     },
 	computed: {
 		filteredProject: function() {

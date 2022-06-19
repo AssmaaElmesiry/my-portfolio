@@ -13,23 +13,38 @@
                 </div>
                 <kinesis-container class="kinesis-container w-full h-full flex">
                     <kinesis-element :strength="30" class="kinesis-item">
-                        <div class="images absolute top-0 right-0 bottom-0 w-1/2 z-10">
-                            <img src="../assets/test2.png" class="w-full h-auto absolute top-1/2 transform -translate-y-1/2" />
+                        <div class="images absolute top-0 right-28 bottom-0 w-1/3 z-10">
+                            <img src="../assets/intro.png" class="w-full h-auto absolute top-1/2 transform -translate-y-1/2" />
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item2">
                         <div class="bgimage">
-                            <div></div>
+                            <img src="../assets/item1.png" class="absolute top-1/4 right-1/3 w-12"/>
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="80" class="kinesis-item3">
                         <div class="bgimage">
-                            <div></div>
+                            <img src="../assets/item4.png" class="absolute w-12 bottom-1/4 right-14"/>
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item4">
                         <div class="bgimage">
-                            <div></div>
+                            <img src="../assets/item2.png" class="absolute w-12 top-1/2 right-8"/>
+                        </div>
+                    </kinesis-element>
+                    <kinesis-element :strength="50" class="kinesis-item5">
+                        <div class="bgimage">
+                            <img src="../assets/item5.png" class="absolute w-12 top-1/3 right-16"/>
+                        </div>
+                    </kinesis-element>
+                    <kinesis-element :strength="50" class="kinesis-item6">
+                        <div class="bgimage">
+                            <img src="../assets/item3.png" class="absolute w-12 bottom-item6b left-item6l"/>
+                        </div>
+                    </kinesis-element>
+                    <kinesis-element :strength="50" class="kinesis-item7">
+                        <div class="bgimage">
+                            <img src="../assets/item6.png" class="absolute w-4 top-1/2 right-item7r"/>
                         </div>
                     </kinesis-element>
                 </kinesis-container>
@@ -85,78 +100,30 @@ export default{
     width: 100%;
     height: 100%;
 }
-.intro .mask .kinesis-container .kinesis-item2{
+
+.intro .mask .kinesis-container  .kinesis-item2 .bgimage,
+.intro .mask .kinesis-container .kinesis-item2 .bgimage,
+.intro .mask .kinesis-container .kinesis-item3 .bgimage,
+.intro .mask .kinesis-container .kinesis-item4 .bgimage,
+.intro .mask .kinesis-container .kinesis-item5 .bgimage,
+.intro .mask .kinesis-container .kinesis-item6 .bgimage,
+.intro .mask .kinesis-container .kinesis-item7 .bgimage{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.intro .mask .kinesis-container .kinesis-item2,
+.intro .mask .kinesis-container .kinesis-item3,
+.intro .mask .kinesis-container .kinesis-item4,
+.intro .mask .kinesis-container .kinesis-item5,
+.intro .mask .kinesis-container .kinesis-item6,
+.intro .mask .kinesis-container .kinesis-item7{
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: -1;
 }
-.intro .mask .kinesis-container  .kinesis-item2 .bgimage{
-  width: 100%;
-  height: 100%;
-}
-.intro .mask .kinesis-container  .kinesis-item2 .bgimage div{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.intro .mask .kinesis-container  .kinesis-item2 .bgimage div:before{
-    content: "";
-    border: 6px dotted #45BEB7;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 45%;
-    right: 40%;
-}
-.intro .mask .kinesis-container .kinesis-item3{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-}
-.intro .mask .kinesis-container  .kinesis-item3 .bgimage{
-  width: 100%;
-  height: 100%;
-}
-.intro .mask .kinesis-container  .kinesis-item3 .bgimage div{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.intro .mask .kinesis-container  .kinesis-item3 .bgimage div:before{
-    content: "";
-    border: 6px double #45BEB7;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    bottom: 36%;
-    right: 7%;
-}
-.intro .mask .kinesis-container .kinesis-item4{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-}
-.intro .mask .kinesis-container  .kinesis-item4 .bgimage{
-  width: 100%;
-  height: 100%;
-}
-.intro .mask .kinesis-container  .kinesis-item4 .bgimage div{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.intro .mask .kinesis-container  .kinesis-item4 .bgimage div:before{
-    content: "";
-    border: 6px solid #fff;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 25%;
-    right: 1%;
-}
+
 /* Style About Vue Writer */
 .is-typed {
   color: #45BEB7;

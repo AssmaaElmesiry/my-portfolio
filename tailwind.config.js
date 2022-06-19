@@ -24,8 +24,11 @@ module.exports = {
             },
             Heights: {
                 'item': '59.2',
-
-
+            },
+            inset: {
+                'item7r': '43%',
+                'item6b': '20%',
+                'item6l': '57%'
             }
         },
     },
