@@ -6,6 +6,7 @@ import AboutMeVue from "./components/AboutMe.vue";
 import MySkillVue from "./components/MySkill.vue";
 import ProjectsVue from "./components/Projects.vue";
 import MyServicesVue from "./components/MyServices.vue";
+import FooterVue from "./components/Footer.vue";
 export default{
   components:{
     mouseStyleVue,
@@ -15,6 +16,7 @@ export default{
     MySkillVue,
     ProjectsVue,
     MyServicesVue,
+    FooterVue,
   }
 }
 </script>
@@ -27,6 +29,7 @@ export default{
   <MySkillVue/>
   <ProjectsVue/>
   <MyServicesVue/>
+  <FooterVue/>
 </template>
 
 <style>
