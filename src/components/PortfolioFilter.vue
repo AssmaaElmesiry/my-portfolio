@@ -39,23 +39,23 @@
                         <p class="text-mainColor">{{project.title}}</p>
                     </div>
                     <div class="more opacity-0 text-center bottom-0 left-0 w-full flex justify-center absolute transition-all ease-in-out duration-700" >
-                        <mainbuttonVue id="showModal1" @click="showModal1 = true">LEARN MORE</mainbuttonVue>
+                        <mainbuttonVue @click="showModal = true">LEARN MORE</mainbuttonVue>
                     </div>
                 </li>
             </ul>
             <Teleport to="body">
-                <!-- use the modal component, pass in the prop -->
-                <ModalVue :show="showModal1" @close="showModal1 = false">
-                    <template #header>
-                        <h3>custom header</h3>
-                    </template>
-                    <template #body>
-                        <h3>jdfhkdjfhdkfjh</h3>
-                    </template>
+               <div  v-for="item in Modal" :key="item.id"> <!-- use the modal component, pass in the prop -->
+                <ModalVue v-if="showModal" @close="showModal = false">
+                        <template #header>
+                            <h3>{{item.name}}</h3>
+                        </template>
+                        <template #body>
+                            <h3>{{item.title}}</h3>
+                        </template>
                 </ModalVue>
-                
+                </div>
             </Teleport>
-            
+
         </div>
     </div>
 </template>
@@ -77,7 +77,11 @@ export default {
             ],
             selectedCategory: "All",
             active_el: 1,
-            showModal1: false
+            showModal: false,
+            Modal:[
+                {id:1,'name': 'asaccccccccsas', title: 'ff'},
+                {id:2,'name': 'asasas', title: 'hhh'},
+            ]
         }
     },
     components:{
@@ -102,7 +106,7 @@ export default {
     methods: {
         activate:function(el){
             this.active_el = el;
-        }
+        },
     },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <Transition name="modal">
-    <div v-if="show" class="modal-mask">
+    <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
@@ -28,7 +28,7 @@
 <script>
 export default {
   props: {
-    show: Boolean
+
   }
 }
 </script>

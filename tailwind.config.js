@@ -14,7 +14,7 @@ module.exports = {
                 'bgHeader': '#333232',
                 'mainColor': ' #45BEB7',
                 'bgsection': '#3c3c3c',
-                'gray': 'b6b2bf',
+                'gray': '#b6b2bf',
                 'html': '#e54c21',
                 'css': '#248cc9',
                 'sass': '#ce679a',
@@ -24,6 +24,9 @@ module.exports = {
             },
             Heights: {
                 'item': '59.2',
+            },
+            width: {
+                'itemW': '49%'
             },
             inset: {
                 'item7r': '43%',
