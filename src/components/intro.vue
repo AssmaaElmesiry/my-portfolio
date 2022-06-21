@@ -64,7 +64,7 @@
                         </div>
                     </kinesis-element>
                 </kinesis-container>
-                <ul class="social fixed z-50 md:left-4 right-0 md:top-1/2 top-3/4 h-36 flex flex-col justify-between w-fit">
+                <ul class="social fixed z-50 md:left-4 right-0 md:top-1/2 top-3/4 h-36 flex flex-col justify-between w-min">
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" icon="envelope-open-text" /></a></li>
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','instagram']" /></a></li>
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','google']" /></a></li>
