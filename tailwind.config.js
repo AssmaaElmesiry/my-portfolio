@@ -32,6 +32,9 @@ module.exports = {
                 'item7r': '43%',
                 'item6b': '20%',
                 'item6l': '57%'
+            },
+            margin: {
+                'interstM': '30%'
             }
         },
     },

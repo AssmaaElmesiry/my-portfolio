@@ -1,6 +1,23 @@
 <template>
     <section class="intro w-full h-screen relative bg-bgHeader">
-        <div class="container mx-auto px-4">
+        <vue-particles
+                color="#fff"
+                :particleOpacity="0.7"
+                :particlesNumber="80"
+                shapeType="circle"
+                :particleSize="4"
+                linesColor="#dedede"
+                :linesWidth="1"
+                :lineLinked="true"
+                :lineOpacity="0.4"
+                :linesDistance="150"
+                :moveSpeed="3"
+                :hoverEffect="true"
+                hoverMode="grab"
+                :clickEffect="true"
+                clickMode="push"
+            />
+        <div class="container mx-auto sm:px-20 px-4">
             <div class="mask w-full h-screen relative">
                 <div class="content absolute w-1/2 top-1/2 z-10 transform -translate-y-1/2">
                     <P class="text-white text-xl font-bold">Hello, I'm</P>
@@ -8,7 +25,6 @@
                     <h2 class="text-white flex items-end sm:text-5xl text-4xl"> Creative <VueWriter :array="arr" /></h2>
                     <div class="buttons flex items-center mt-9">
                         <mainbutton class="ml-2"> Say Hello <fa icon="envelope-open-text" class="pl-4" /></mainbutton>
-                        <a href="#" class="about text-white inline-block relative ml-6 transition ease-in duration-300">About Me</a>
                     </div>
                 </div>
                 <kinesis-container class="kinesis-container w-full h-full flex">
@@ -48,7 +64,7 @@
                         </div>
                     </kinesis-element>
                 </kinesis-container>
-                <ul class="social absolute md:-left-14 right-0 md:top-1/2 top-3/4 h-36 flex flex-col justify-between ">
+                <ul class="social fixed z-50 md:left-4 right-0 md:top-1/2 top-3/4 h-36 flex flex-col justify-between w-fit">
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" icon="envelope-open-text" /></a></li>
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','instagram']" /></a></li>
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','google']" /></a></li>
@@ -62,6 +78,7 @@
 import { KinesisContainer, KinesisElement} from 'vue-kinesis'
 import VueWriter from 'vue-writer'
 import mainbutton from './ButtonStyle/mainbutton.vue'
+
 export default{
     data() {
         return {
@@ -72,8 +89,7 @@ export default{
         VueWriter,
         mainbutton,
         KinesisContainer,
-        KinesisElement
-
+        KinesisElement,
     },
 }
 </script>

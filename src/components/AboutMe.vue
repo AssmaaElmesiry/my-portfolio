@@ -1,6 +1,6 @@
 <template>
 <section class="AboutMe py-24 px-0 bg-bgsection h-full" id="aboutme">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto sm:px-6 px-4">
         <div class="mask flex md:flex-row flex-col justify-between">
             <div class="md:w-1/2 w-full flex justify-center items-center">  
                 <div class="myphoto w-72 filter grayscale hover:filter hover:grayscale-0 transition ease-in duration-300">
@@ -28,12 +28,14 @@
             </div>
         </div>
         <div class="my-28">
-            <h2 class="text-xl font-bold text-mainColor mb-4"> My Interests</h2>
-            <ul class="interests flex sm:flex-row sm:justify-between flex-col">
-                <li v-for="value in myInterests" :key="value" class="border-4 border-double border-white flex flex-col p-6 text-white text-center mb-3">
-                    <fa :icon="['fas',value.icon]" class="text-5xl text-mainColor"/>
-                    {{value.item}}
-                </li>
+            <h2 class="text-xl font-bold text-mainColor mb-14 ml-interstM"> My Interests</h2>
+            <ul class="interests flex sm:flex-row sm:justify-center flex-col">
+                <div v-for="value in myInterests" :key='value' class="mr-14 text-center">
+                    <li  class="w-16 h-16 border-2 border-solid border-mainColor rounded-full flex flex-col justify-center text-white text-center mb-3 transition ease-in duration-300">
+                        <fa :icon="['fas',value.icon]" class="text-2xl text-mainColor transition ease-in duration-300"/>
+                    </li>
+                    <p class="text-white opacity-0">{{value.item}}</p>
+                </div>
             </ul>
         </div>
         <div class="flex justify-center my-14">
@@ -112,5 +114,21 @@ export default{
 }
 .myphoto:hover{
     filter: none;
+}
+.interests div:hover p{
+    animation: toBottomFromTop 0.3s forwards;
+    opacity: 1;
+}
+.interests div:hover li{
+    background-color: #45BEB7;
+}
+.interests div:hover svg{
+    color: #fff;
+}
+@keyframes toBottomFromTop{
+    49% {
+        transform: translateY(100%);
+    }
+
 }
 </style>

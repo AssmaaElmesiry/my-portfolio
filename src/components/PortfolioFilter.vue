@@ -1,6 +1,6 @@
 <template>
     <div class=" bg-bgsection py-24">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto sm:px-6 px-4">
             <div class="filter flex sm:flex-row flex-wrap justify-center">
                 <label 
                     class="text-white p-3 text-base mb-5" 

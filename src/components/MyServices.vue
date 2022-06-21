@@ -1,5 +1,5 @@
 <template>
-        <section class="container mx-auto px-4">
+        <section class="container mx-auto sm:px-6 px-4">
                 <div class="flex flex-wrap justify-between">
                         <div class="w-itemW mb-6 pr-32 flex flex-col justify-center">
                                 <span class="text-mainColor text-2xl font-bold mb-1">What I Do</span>

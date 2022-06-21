@@ -1,6 +1,6 @@
 <template>
     <header :class="{'scrolled-nav': scrolledNav }" class="h-auto w-full z-50 fixed text-white py-5 transition ease-in duration-300">
-        <div class="container mx-auto px-4 flex">
+        <div class="container mx-auto sm:px-6 px-4 flex">
             <div class="flex flex-grow">
                 <img src="../assets/logo.png" class="max-w-maxWidthHeader"/>
             </div>
@@ -10,8 +10,6 @@
                     <li> <a class="text-white text-xl relative transition ease-in duration-300" href="#aboutme">About</a> </li>
                     <li> <a class="text-white text-xl relative transition ease-in duration-300" href="#portfolio">Portfolio</a></li>
                     <li> <a class="text-white text-xl relative transition ease-in duration-300" href="#service">Service</a> </li>
-                    <li> <a class="text-white text-xl relative transition ease-in duration-300" href="#testimonial">Testimonial</a></li>
-                    <li> <a class="text-white text-xl relative transition ease-in duration-300" href="#blog">Blog</a> </li>
                     <li> <a class="text-white text-xl relative transition ease-in duration-300" href="#connectme">Contact</a></li>
                 </ul>
                 <div class="icon">
@@ -26,8 +24,6 @@
                             <li class="ml-0 py-4 px-0"> <a class="text-white font-bold transition ease-in duration-300" href="#aboutme">About</a> </li>
                             <li class="ml-0 py-4 px-0"> <a class="text-white font-bold transition ease-in duration-300" href="#portfolio">Portfolio</a></li>
                             <li class="ml-0 py-4 px-0"> <a class="text-white font-bold transition ease-in duration-300" href="#service">Service</a> </li>
-                            <li class="ml-0 py-4 px-0"> <a class="text-white font-bold transition ease-in duration-300" href="#testimonial">Testimonial</a></li>
-                            <li class="ml-0 py-4 px-0"> <a class="text-white font-bold transition ease-in duration-300" href="#blog">Blog</a> </li>
                             <li class="ml-0 py-4 px-0"> <a class="text-white font-bold transition ease-in duration-300" href="#connectme">Contact</a></li>
                         <div class="flex justify-evenly items-center">
                             <li><a class="text-white" href="#" target="_blank"><fa class="text-sm" icon="envelope-open-text" /></a></li>
@@ -114,7 +110,7 @@ a.router-link-exact-active {
     color: #45BEB7 !important;
 }
 .scrolled-nav{
-    background-color: #3c3c3c;
+    background-color: #45BEB7;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
     height: 100px;
     z-index: 999;
