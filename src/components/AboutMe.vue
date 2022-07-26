@@ -27,10 +27,10 @@
                 </div>
             </div>
         </div>
-        <div class="my-28">
-            <h2 class="text-xl font-bold text-mainColor mb-14 ml-interstM"> My Interests</h2>
-            <ul class="interests flex sm:flex-row sm:justify-center flex-col">
-                <div v-for="value in myInterests" :key='value' class="mr-14 text-center">
+        <div class="my-14">
+            <h2 class="text-xl font-bold text-mainColor mb-14 lg:ml-interstM"> My Interests</h2>
+            <ul class="interests flex sm:flex-row justify-center items-center flex-col">
+                <div v-for="value in myInterests" :key='value' class="md:mr-14 mb-4 text-center">
                     <li  class="w-16 h-16 border-2 border-solid border-mainColor rounded-full flex flex-col justify-center text-white text-center mb-3 transition ease-in duration-300">
                         <fa :icon="['fas',value.icon]" class="text-2xl text-mainColor transition ease-in duration-300"/>
                     </li>
@@ -39,7 +39,7 @@
             </ul>
         </div>
         <div class="flex justify-center my-14">
-            <a :href="CV" target="_blank" ><mainbutton class="mainbutton" > Download CV <fa icon="download" /></mainbutton></a>
+            <a :href="CV" target="_blank" ><mainbutton class="mainbutton" > Download resume <fa icon="download" /></mainbutton></a>
         </div>
     </div>
 </section>

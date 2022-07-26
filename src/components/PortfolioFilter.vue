@@ -38,55 +38,107 @@
                         <h2 class="text-white text-3xl">{{project.ProjectName}}</h2>
                         <p class="text-mainColor">{{project.title}}</p>
                     </div>
-                    <div class="more opacity-0 text-center bottom-0 left-0 w-full flex justify-center absolute transition-all ease-in-out duration-700" >
-                        <mainbuttonVue @click="showModal = true">LEARN MORE</mainbuttonVue>
-                    </div>
+                    <a class="more opacity-0 text-center bottom-0 left-0 w-full flex justify-center absolute transition-all ease-in-out duration-700" :href="project.src" target="_blank">
+                        <mainbuttonVue  @click="showModal(project.id)">LEARN MORE</mainbuttonVue>
+                    </a>
                 </li>
             </ul>
-            <Teleport to="body">
-               <div  v-for="item in Modal" :key="item.id"> <!-- use the modal component, pass in the prop -->
-                <ModalVue v-if="showModal" @close="showModal = false">
-                        <template #header>
-                            <h3>{{item.name}}</h3>
-                        </template>
-                        <template #body>
-                            <h3>{{item.title}}</h3>
-                        </template>
-                </ModalVue>
-                </div>
-            </Teleport>
-
         </div>
     </div>
 </template>
 <script>
 import mainbuttonVue from './ButtonStyle/mainbutton.vue';
-import ModalVue from './Modal.vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 export default {
     data() {
         return {
+            test: false,
+            test2: false,
             projects: [
-                {id:1, Image: ("../src/assets/1.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
-                {id:2, Image: ("../src/assets/2.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
-                {id:3, Image: ("../src/assets/3.png"), 'ProjectName': 'asasas', title: 'Vuejs', category: "Vuejs", link:"link"},
-                {id:4, Image: ("../src/assets/4.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
-                {id:5, Image: ("../src/assets/1.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
-                {id:6, Image: ("../src/assets/2.png"), 'ProjectName': 'asasas', title: 'HTML + Css + Javascript', category: "Javascript", link:"link"},
-                {id:7, Image: ("../src/assets/3.png"), 'ProjectName': 'asasas', title: 'Vuejs + bootstrap', category: "Framework", link:"link"},
-                {id:8, Image: ("../src/assets/4.png"), 'ProjectName': 'asasas', title: 'Vuejs + tailwindCSS', category: "Framework", link:"link"},
+                {
+                    id:1,
+                    Image: ("../src/assets/1.png"),
+                    'ProjectName': 'CodeBugLab',
+                    title: 'Vuejs',
+                    category: "Vuejs",
+                    link:"link",
+                    src: ('https://assmaa.commentatk-media.com/project1/index.html')
+                },
+                {
+                    id:2,
+                    Image: ("../src/assets/2.png"),
+                    'ProjectName': 'Comentatk Bot',
+                    title: 'Vuejs',
+                    category: "Vuejs",
+                    link:"link",
+                    src: ('https://www.c-bot.net/')
+                },
+                {
+                    id:3,
+                    Image: ("../src/assets/3.png"),
+                    'ProjectName': 'Mzadat',
+                    title: 'Vuejs',
+                    category: "Vuejs",
+                    link:"link",
+                    src: ('https://assmaa.commentatk-media.com/project2/index.html')
+                },
+                {
+                    id:4,
+                    Image: ("../src/assets/4.png"),
+                    'ProjectName': 'Comentatk SmS',
+                    title: 'HTML + Css + Javascript',
+                    category: "Javascript",
+                    link:"link",
+                    src: ('https://assmaa.commentatk-media.com/project/index.html')
+                },
+                {
+                    id:5,
+                    Image: ("../src/assets/1.png"),
+                    'ProjectName': 'CodeBugLab',
+                    title: 'HTML + Css + Javascript',
+                    category: "Javascript",
+                    link:"link",
+                    src: ('https://assmaa.commentatk-media.com/project1/index.html')
+                },
+                {
+                    id:6,
+                    Image: ("../src/assets/2.png"),
+                    'ProjectName': 'Comentatk Bot',
+                    title: 'HTML + Css + Javascript',
+                    category: "Javascript",
+                    link:"link",
+                    src: ('https://www.c-bot.net/')
+                },
+                {
+                    id:7,
+                    Image: ("../src/assets/3.png"),
+                    'ProjectName': 'Mzadat',
+                    title: 'Vuejs + bootstrap',
+                    category: "Framework",
+                    link:"link",
+                    src: ('https://assmaa.commentatk-media.com/project2/index.html')
+                },
+                {
+                    id:8,
+                    Image: ("../src/assets/4.png"),
+                    'ProjectName': 'Comentatk SmS',
+                    title: 'Vuejs + tailwindCSS',
+                    category: "Framework",
+                    link:"link",
+                    src: ('https://assmaa.commentatk-media.com/project/index.html')
+                },
             ],
             selectedCategory: "All",
             active_el: 1,
-            showModal: false,
-            Modal:[
-                {id:1,'name': 'asaccccccccsas', title: 'ff'},
-                {id:2,'name': 'asasas', title: 'hhh'},
-            ]
         }
     },
     components:{
         mainbuttonVue,
-        ModalVue,
+        Swiper,
+        SwiperSlide,
     },
 	computed: {
 		filteredProject: function() {
@@ -103,6 +155,11 @@ export default {
 			}
 		}
 	},
+    setup() {
+        return {
+            modules: [Navigation],
+        };
+    },
     methods: {
         activate:function(el){
             this.active_el = el;
@@ -120,7 +177,7 @@ label.active{
     transition: .6s ease all;
 }
 .people-list li:hover img{
-    opacity: 0;
+    opacity: 0.2;
     transition: 0.6s ease all;
 }
 li:hover .text{

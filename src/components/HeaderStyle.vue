@@ -83,7 +83,7 @@
 </script>
 
 
-<style>
+<style scoped>
 
 li:hover a{
     color: #45BEB7;

@@ -1,22 +1,5 @@
 <template>
     <section class="intro w-full h-screen relative bg-bgHeader">
-        <vue-particles
-                color="#fff"
-                :particleOpacity="0.7"
-                :particlesNumber="80"
-                shapeType="circle"
-                :particleSize="4"
-                linesColor="#dedede"
-                :linesWidth="1"
-                :lineLinked="true"
-                :lineOpacity="0.4"
-                :linesDistance="150"
-                :moveSpeed="3"
-                :hoverEffect="true"
-                hoverMode="grab"
-                :clickEffect="true"
-                clickMode="push"
-            />
         <div class="container mx-auto sm:px-20 px-4">
             <div class="mask w-full h-screen relative">
                 <div class="content absolute w-1/2 top-1/2 z-10 transform -translate-y-1/2">
@@ -64,7 +47,7 @@
                         </div>
                     </kinesis-element>
                 </kinesis-container>
-                <ul class="social fixed z-50 md:left-4 right-0 md:top-1/2 top-3/4 h-36 flex flex-col justify-between w-min">
+                <ul class="social fixed z-50 md:left-4 right-3 md:top-1/2 top-3/4 h-36 flex flex-col justify-between w-min">
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" icon="envelope-open-text" /></a></li>
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','instagram']" /></a></li>
                     <li><a href="#"><fa class="text-white text-xl transition ease-out duration-300 hover:text-mainColor :hover:transition hover:ease-out hover:duration-300" :icon="['fab','google']" /></a></li>
