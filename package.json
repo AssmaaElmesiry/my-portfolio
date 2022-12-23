@@ -17,6 +17,7 @@
         "swiper": "^8.2.4",
         "vue": "^3.2.33",
         "vue-kinesis": "^2.0.5",
+        "vue-light-gallery": "^1.0.1",
         "vue-writer": "^1.2.0"
     },
     "devDependencies": {

@@ -1,8 +1,8 @@
 <template>
     <header :class="{'scrolled-nav': scrolledNav }" class="h-auto w-full z-50 fixed text-white py-5 transition ease-in duration-300">
         <div class="container mx-auto sm:px-6 px-4 flex">
-            <div class="flex flex-grow">
-                <img src="../assets/logo.png" class="max-w-maxWidthHeader"/>
+            <div class="flex flex-grow items-end">
+                <h1 class="text-mainColor text-6xl">A</h1><h2>ssmaa</h2>
             </div>
             <nav class="relative flex flex-grow justify-end items-center mx-auto my-0 transition ease-in duration-300">
                 <ul v-show="!mobile" class="flex justify-around w-full ">
@@ -110,7 +110,7 @@ a.router-link-exact-active {
     color: #45BEB7 !important;
 }
 .scrolled-nav{
-    background-color: #45BEB7;
+    background-color: #333232;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
     height: 100px;
     z-index: 999;

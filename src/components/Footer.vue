@@ -2,7 +2,7 @@
     <section class="bg-bgHeader" id="connectme">
         <div class="container mx-auto sm:px-6 px-4 pt-32 pb-16">
             <div class="flex flex-col justify-center items-center">
-                <img src="../assets/logo.png" />
+                <!-- <img src="../assets/logo.png" /> -->
 
                     <div class="flex justify-around w-1/2 mt-7">
                         <div v-for="item in icons" :key="item" class="icon flex justify-center items-center w-12 h-12 rounded-full overflow-hidden text-white border border-solid border-white hover:transform hover:scale-90 hover:bg-mainColor hover:border-mainColor ">
