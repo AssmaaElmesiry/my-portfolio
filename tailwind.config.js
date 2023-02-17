@@ -20,7 +20,9 @@ module.exports = {
                 'sass': '#ce679a',
                 'bootstrap': '#9466dc',
                 'vuejs': '#3fb984',
+                'react': '#61dbfb',
                 'js': '#f7e018',
+                'paleturquoise' : "paleturquoise",
             },
             Heights: {
                 'item': '59.2',
@@ -35,6 +37,9 @@ module.exports = {
             },
             margin: {
                 'interstM': '30%'
+            },
+            transformOrigin:{
+                'transformtext': '-50% -50%'
             }
         },
     },

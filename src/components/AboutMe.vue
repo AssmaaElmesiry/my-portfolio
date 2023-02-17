@@ -3,8 +3,8 @@
     <div class="container mx-auto sm:px-6 px-4">
         <div class="mask flex md:flex-row flex-col justify-between">
             <div class="md:w-1/2 w-full flex justify-center items-center">  
-                <div class="myphoto w-72 filter grayscale hover:filter hover:grayscale-0 transition ease-in duration-300">
-                    <img src="../assets/frame.png" class="transform rotate-12 hover:rotate-0 transition ease-in duration-300" alt="porfile pic" />
+                <div class="myphoto w-72  transition ease-in duration-300">
+                    <img src="../assets/me.png" class="" alt="porfile pic" />
                 </div>
             </div>
             <div class="md:w-1/2 w-full">
@@ -102,19 +102,20 @@ export default{
     left: -25px;
     color: #45BEB7;
 }
-.myphoto::before{
+.myphoto{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+/* .myphoto::before{
     content: "";
-    background-image: url("../assets/mee.webp");
     position: absolute;
-    top: 2px;
-    left: 34px;
-    width: 80%;
-    height: 99%;
-    background-size: cover;
-}
-.myphoto:hover{
-    filter: none;
-}
+    background-color: #45BEB7;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    width: 50%;
+    height: 50%;
+} */
 .interests div:hover p{
     animation: toBottomFromTop 0.3s forwards;
     opacity: 1;

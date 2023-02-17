@@ -32,15 +32,32 @@
                 </label>
             </div>
             <ul class="people-list flex flex-wrap justify-center w-full h-full ">
-                <li v-for="project in filteredProject" :key="project.id" class="relative overflow-hidden w-80 h-80 p-3 transition-all ease-in-out duration-700">
-                    <img :src=" project.Image" class="w-full"/>
-                    <div class="text w-full px-3 text-center absolute top-0 left-1/2 transform -translate-x-2/4  opacity-0 transition-all ease-in-out duration-700">
+                <li v-for="project in filteredProject" :key="project.id" class="card">
+                    <div class="w-64 h-64 overflow-hidden rounded-lg relative">
+                        <img :src=" project.Image" class=""/>
+                        <div class="absolute bottom-0 m-auto left-0 right-0 w-1/2 text-center rounded-t-lg  py-2 px-4 text-white bg-mainColor">
+                            <p>{{project.title}}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="my-4">
+                            <h2 class="text-center text-white text-2xl">{{project.ProjectName}}</h2>
+                        </div>
+                        <div>
+                            <p class="text-justify text-bgsection"> {{ project.desc }} </p>
+                        </div>
+                        <div class="flex justify-between my-2">
+                            <a :href="project.website" target="_blank" class="text-2xl text-bgsection"><fa :icon="['fas',project.link]" /></a>
+                            <a :href="project.github" target="_blank" class="text-2xl text-bgsection"><fa :icon="['fab',project.code]" /></a>
+                        </div>
+                    </div>
+                    <!-- <div class="text w-full px-3 text-center absolute top-0 left-1/2 transform -translate-x-2/4  opacity-0 transition-all ease-in-out duration-700">
                         <h2 class="text-white text-3xl">{{project.ProjectName}}</h2>
                         <p class="text-mainColor">{{project.title}}</p>
                     </div>
                     <a class="more opacity-0 text-center bottom-0 left-0 w-full flex justify-center absolute transition-all ease-in-out duration-700" :href="project.src" target="_blank">
                         <mainbuttonVue  @click="showModal(project.id)">LEARN MORE</mainbuttonVue>
-                    </a>
+                    </a> -->
                 </li>
             </ul>
         </div>
@@ -65,7 +82,12 @@ export default {
                     title: 'Vuejs',
                     category: "Vuejs",
                     link:"link",
-                    src: ('https://assmaa.commentatk-media.com/project1/index.html')
+                    src: ('https://assmaa.commentatk-media.com/project1/index.html'),
+                    desc: "We are startup company creating and maintaining web applications and open source packages.",
+                    link: "link",
+                    code: "github",
+                    website: "http://www.google.com",
+                    github: "www.youtube.com",
                 },
                 {
                     id:2,
@@ -74,7 +96,11 @@ export default {
                     title: 'Vuejs',
                     category: "Vuejs",
                     link:"link",
-                    src: ('https://www.c-bot.net/')
+                    code: "github",
+                    src: ('https://www.c-bot.net/'),
+                    desc: 'Build your bot with your feedback control panel ,Bot without the need for any technical expertise.',
+                    website: "http://www.google.com",
+                    github: "www.youtube.com",
                 },
                 {
                     id:3,
@@ -83,52 +109,79 @@ export default {
                     title: 'Vuejs',
                     category: "Vuejs",
                     link:"link",
-                    src: ('https://assmaa.commentatk-media.com/project2/index.html')
+                    code: "github",
+                    src: ('https://assmaa.commentatk-media.com/project2/index.html'),
+                    desc: "Everything you are looking for in the world of online shopping and auction.",
+                    website: "http://www.google.com",
+                    github: "www.youtube.com",
                 },
                 {
                     id:4,
                     Image: ("../src/assets/4.png"),
                     'ProjectName': 'Comentatk SmS',
-                    title: 'HTML + Css + Javascript',
+                    title: 'Javascript',
                     category: "Javascript",
                     link:"link",
-                    src: ('https://assmaa.commentatk-media.com/project/index.html')
+                    code: "github",
+                    src: ('https://assmaa.commentatk-media.com/project/index.html'),
+                    desc: "Our platform is full of efficient and complete tools to manage your messages.",
+                    website: "http://www.google.com",
+                    github: "www.youtube.com",
                 },
                 {
                     id:5,
                     Image: ("../src/assets/1.png"),
                     'ProjectName': 'CodeBugLab',
-                    title: 'HTML + Css + Javascript',
+                    title: 'Javascript',
                     category: "Javascript",
                     link:"link",
-                    src: ('https://assmaa.commentatk-media.com/project1/index.html')
+                    code: "github",
+                    src: ('https://assmaa.commentatk-media.com/project1/index.html'),
+                    desc: "We are startup company creating and maintaining web applications and open source packages.",
+                    website: "http://www.google.com",
+                    github: "www.youtube.com",
                 },
                 {
                     id:6,
                     Image: ("../src/assets/2.png"),
                     'ProjectName': 'Comentatk Bot',
-                    title: 'HTML + Css + Javascript',
+                    title: 'Javascript',
                     category: "Javascript",
                     link:"link",
-                    src: ('https://www.c-bot.net/')
+                    code: "github",
+                    src: ('https://www.c-bot.net/'),
+                    desc: 'Build your bot with your feedback control panel ,Bot without the need for any technical expertise.',
+                    website: "http://www.google.com",
+                    github: "www.youtube.com",
+
                 },
                 {
                     id:7,
                     Image: ("../src/assets/3.png"),
                     'ProjectName': 'Mzadat',
-                    title: 'Vuejs + bootstrap',
+                    title: 'Vuejs',
                     category: "Framework",
                     link:"link",
-                    src: ('https://assmaa.commentatk-media.com/project2/index.html')
+                    code: "github",
+                    src: ('https://assmaa.commentatk-media.com/project2/index.html'),
+                    desc: "Everything you are looking for in the world of online shopping and auction.",
+                    website: "http://www.google.com",
+                    github: "www.youtube.com",
+
                 },
                 {
                     id:8,
                     Image: ("../src/assets/4.png"),
                     'ProjectName': 'Comentatk SmS',
-                    title: 'Vuejs + tailwindCSS',
+                    title: 'Vuejs',
                     category: "Framework",
                     link:"link",
-                    src: ('https://assmaa.commentatk-media.com/project/index.html')
+                    code: "github",
+                    src: ('https://assmaa.commentatk-media.com/project/index.html'),
+                    desc: "Our platform is full of efficient and complete tools to manage your messages.",
+                    website: "http://www.google.com",
+                    github: "www.youtube.com",
+
                 },
             ],
             selectedCategory: "All",
@@ -176,18 +229,36 @@ label.active{
     color: #45BEB7;
     transition: .6s ease all;
 }
-.people-list li:hover img{
+/* .people-list li:hover img{
     opacity: 0.2;
     transition: 0.6s ease all;
-}
-li:hover .text{
+} */
+/* li:hover .text{
     opacity: 1;
     top: 25%;
     transition: all 700ms ease-in-out;
-}
-li:hover .more{
+} */
+/* li:hover .more{
     opacity: 1;
     bottom: 25%;
     transition: all 700ms ease-in-out;
+} */
+.card{
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #45BEB7;
+}
+.card img{
+    transition: transform 10s ease-in-out;
+}
+.card div:hover img{
+    transform: translateY(calc(-100% + 256px));
+  transition: transform 10s ease-in-out;
 }
 </style>

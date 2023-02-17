@@ -54,6 +54,13 @@
                         <k-progress :percent="80" color="#3fb984" :show-text="false"></k-progress>
                     </div>
                 </div>
+                <div class="w-1/6  mb-12 mx-14">
+                    <div class="flex justify-center flex-col">
+                        <fa class="text-react text-6xl" :icon="['fab','react']" />
+                        <h2 class=" text-center m-3 text-gray">react</h2>
+                        <k-progress :percent="80" color="#61dbfb" :show-text="false"></k-progress>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

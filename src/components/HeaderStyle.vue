@@ -1,8 +1,8 @@
 <template>
     <header :class="{'scrolled-nav': scrolledNav }" class="h-auto w-full z-50 fixed text-white py-5 transition ease-in duration-300">
         <div class="container mx-auto sm:px-6 px-4 flex">
-            <div class="flex flex-grow items-end">
-                <h1 class="text-mainColor text-6xl">A</h1><h2>ssmaa</h2>
+            <div class="flex flex-grow">
+                <img src="../assets/logo.png" class="w-24" alt="logo"/>
             </div>
             <nav class="relative flex flex-grow justify-end items-center mx-auto my-0 transition ease-in duration-300">
                 <ul v-show="!mobile" class="flex justify-around w-full ">
@@ -15,8 +15,8 @@
                 <div class="icon">
                     <fa icon="bars" @click="toggleMobileNav" v-show="mobile" :class="{'icon-active': mobileNav}" />
                 </div>
-                <transition name="mobile-nav">
-                    <ul v-show="mobileNav" class="flex flex-col fixed w-full h-full bg-bgHeader top-0 left-0 p-6 text-center max-w-dropdownWidth">
+                <transition name="mobile-nav" class="mobile-nav">
+                    <ul v-show="mobileNav" class="flex flex-col fixed w-full h-screen bg-bgHeader top-0 left-0 p-6 text-center max-w-dropdownWidth">
                         <div class="flex justify-center mb-10">
                             <img src="../assets/logo.png" class="w-1/3"/>
                         </div>
@@ -109,10 +109,12 @@ li:hover a::before{
 a.router-link-exact-active {
     color: #45BEB7 !important;
 }
+
 .scrolled-nav{
-    background-color: #333232;
+    backdrop-filter: blur(4px);
+    background-color: #3c3c3cad;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-    height: 100px;
+    /* height: 100px; */
     z-index: 999;
     right: 0;
 }
