@@ -69,6 +69,11 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+import img1 from "../assets/1.png"
+import img2 from "../assets/2.png"
+import img3 from "../assets/3.png"
+import img4 from "../assets/4.png"
+import img5 from "../assets/5.png"
 export default {
     data() {
         return {
@@ -77,7 +82,7 @@ export default {
             projects: [
                 {
                     id:1,
-                    Image: ("../src/assets/1.png"),
+                    Image: img1,
                     'ProjectName': 'CodeBugLab',
                     title: 'Vuejs',
                     category: "Vuejs",
@@ -91,7 +96,7 @@ export default {
                 },
                 {
                     id:2,
-                    Image: ("../src/assets/2.png"),
+                    Image: img2,
                     'ProjectName': 'Comentatk Bot',
                     title: 'Vuejs',
                     category: "Vuejs",
@@ -104,7 +109,7 @@ export default {
                 },
                 {
                     id:3,
-                    Image: ("../src/assets/3.png"),
+                    Image: img3,
                     'ProjectName': 'Mzadat',
                     title: 'Vuejs',
                     category: "Vuejs",
@@ -117,7 +122,7 @@ export default {
                 },
                 {
                     id:4,
-                    Image: ("../src/assets/4.png"),
+                    Image: img4,
                     'ProjectName': 'Comentatk SmS',
                     title: 'Javascript',
                     category: "Javascript",
@@ -130,7 +135,7 @@ export default {
                 },
                 {
                     id:5,
-                    Image: ("../src/assets/1.png"),
+                    Image: img5,
                     'ProjectName': 'CodeBugLab',
                     title: 'Javascript',
                     category: "Javascript",
@@ -143,7 +148,7 @@ export default {
                 },
                 {
                     id:6,
-                    Image: ("../src/assets/2.png"),
+                    Image: img2,
                     'ProjectName': 'Comentatk Bot',
                     title: 'Javascript',
                     category: "Javascript",
@@ -157,7 +162,7 @@ export default {
                 },
                 {
                     id:7,
-                    Image: ("../src/assets/3.png"),
+                    Image: img3,
                     'ProjectName': 'Mzadat',
                     title: 'Vuejs',
                     category: "Framework",
@@ -171,7 +176,7 @@ export default {
                 },
                 {
                     id:8,
-                    Image: ("../src/assets/4.png"),
+                    Image: img1,
                     'ProjectName': 'Comentatk SmS',
                     title: 'Vuejs',
                     category: "Framework",
