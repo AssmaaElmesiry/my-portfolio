@@ -14,7 +14,7 @@ import VueWriter from "vue-writer";
 
 import KProgress from 'k-progress-v3';
 
-import VueParticles from 'vue-particles'
+// import VueParticles from 'vue-particles'
 const app = createApp(App);
 
 app.use(VueKinesis);
@@ -24,5 +24,5 @@ createApp(App)
     .component('fa', FontAwesomeIcon)
     .component('k-progress', KProgress)
     .use(VueWriter)
-    .use(VueParticles)
+    // .use(VueParticles)
     .mount('#app')
