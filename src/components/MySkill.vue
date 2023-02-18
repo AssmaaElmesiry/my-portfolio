@@ -66,12 +66,13 @@
     </section>
 </template>
 <script>
+import tailwind from "../assets/tailwind.png"
 export default{
   methods: {
   },
     data() {
         return {
-            tailwind: ('../src/assets/tailwind.png'),
+            tailwind: tailwind,
         }
     },
 }

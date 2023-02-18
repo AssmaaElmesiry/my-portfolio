@@ -44,11 +44,11 @@
                             <h2 class="text-center text-white text-2xl">{{project.ProjectName}}</h2>
                         </div>
                         <div>
-                            <p class="text-justify text-bgsection"> {{ project.desc }} </p>
+                            <p class="text-justify text-white px-3"> {{ project.desc }} </p>
                         </div>
-                        <div class="flex justify-between my-2">
-                            <a :href="project.website" target="_blank" class="text-2xl text-bgsection"><fa :icon="['fas',project.link]" /></a>
-                            <a :href="project.github" target="_blank" class="text-2xl text-bgsection"><fa :icon="['fab',project.code]" /></a>
+                        <div class="flex justify-between my-2 px-3">
+                            <a :href="project.website" target="_blank" class="text-2xl text-white"><fa :icon="['fas',project.link]" /></a>
+                            <a :href="project.github" target="_blank" class="text-2xl text-white"><fa :icon="['fab',project.code]" /></a>
                         </div>
                     </div>
                     <!-- <div class="text w-full px-3 text-center absolute top-0 left-1/2 transform -translate-x-2/4  opacity-0 transition-all ease-in-out duration-700">
