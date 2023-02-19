@@ -91,8 +91,8 @@ export default {
                     desc: "We are startup company creating and maintaining web applications and open source packages.",
                     link: "link",
                     code: "github",
-                    website: "http://www.google.com",
-                    github: "www.youtube.com",
+                    website: "https://codebuglab.vercel.app/",
+                    github: "https://github.com/AssmaaElmesiry/codebuglab",
                 },
                 {
                     id:2,
@@ -143,8 +143,8 @@ export default {
                     code: "github",
                     src: ('https://assmaa.commentatk-media.com/project1/index.html'),
                     desc: "We are startup company creating and maintaining web applications and open source packages.",
-                    website: "http://www.google.com",
-                    github: "www.youtube.com",
+                    website: "https://codebuglab.vercel.app/",
+                    github: "https://github.com/AssmaaElmesiry/codebuglab",
                 },
                 {
                     id:6,
