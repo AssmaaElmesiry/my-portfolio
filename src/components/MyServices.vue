@@ -1,5 +1,5 @@
 <template>
-        <section class="container mx-auto sm:px-6 px-4">
+        <section class="container mx-auto sm:px-20 px-4">
                 <div class="grid gap-4 sm:grid-cols-2 grid-cols-1">
                         <div class="mb-6 sm:pr-32 flex flex-col justify-center">
                                 <span class="text-mainColor text-2xl font-bold mb-1">What I Do</span>

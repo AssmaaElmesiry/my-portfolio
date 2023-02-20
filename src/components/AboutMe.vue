@@ -39,17 +39,18 @@
             </ul>
         </div>
         <div class="flex justify-center my-14">
-            <a :href="CV" target="_blank" ><mainbutton class="mainbutton" > Download resume <fa icon="download" /></mainbutton></a>
+            <router-link :to="CV" target="_blank" ><mainbutton class="mainbutton" > Download resume <fa icon="download" /></mainbutton></router-link>
         </div>
     </div>
 </section>
 </template>
 <script>
 import mainbutton from './ButtonStyle/mainbutton.vue'
+import CV from "../assets/Cv.pdf"
 export default{
     data() {
         return {
-            CV: ('../../src/assets/Cv.pdf'),
+            CV: CV,
             myInformation:{
                 Name:{
                     info:'Assmaa El-Mesiry',

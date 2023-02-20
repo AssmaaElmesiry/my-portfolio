@@ -13,37 +13,37 @@
                 <kinesis-container class="kinesis-container w-full h-full flex">
                     <kinesis-element :strength="30" class="kinesis-item">
                         <div class="images absolute top-0 right-28 bottom-0 w-1/3 z-10">
-                            <img src="../assets/intro.png" class="w-full h-auto absolute top-1/2 transform -translate-y-1/2" />
+                            <img src="../assets/intro.png" class="img-intro h-auto absolute transform -translate-y-1/2" />
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item2">
                         <div class="bgimage">
-                            <img src="../assets/item1.png" class="absolute top-1/4 right-1/3 w-12"/>
+                            <img src="../assets/item1.png" class="absolute top-1/4 right-1/3 w-8"/>
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="80" class="kinesis-item3">
                         <div class="bgimage">
-                            <img src="../assets/item4.png" class="absolute w-12 bottom-1/4 right-14"/>
+                            <img src="../assets/item4.png" class="absolute w-8 bottom-1/4 right-14"/>
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item4">
                         <div class="bgimage">
-                            <img src="../assets/item2.png" class="absolute w-12 top-1/2 right-8"/>
+                            <img src="../assets/item2.png" class="absolute w-8 top-1/2 right-8"/>
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item5">
                         <div class="bgimage">
-                            <img src="../assets/item5.png" class="absolute w-12 top-1/3 right-16"/>
+                            <img src="../assets/item5.png" class="absolute w-8 top-1/3 right-16"/>
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item6">
                         <div class="bgimage">
-                            <img src="../assets/item3.png" class="absolute w-12 bottom-item6b left-item6l"/>
+                            <img src="../assets/item3.png" class="absolute w-8 bottom-item6b left-3/4"/>
                         </div>
                     </kinesis-element>
                     <kinesis-element :strength="50" class="kinesis-item7">
                         <div class="bgimage">
-                            <img src="../assets/item6.png" class="absolute w-4 top-1/2 right-item7r"/>
+                            <img src="../assets/item6.png" class="absolute w-2 top-1/2 right-1/3"/>
                         </div>
                     </kinesis-element>
                 </kinesis-container>
@@ -77,6 +77,13 @@ export default{
 }
 </script>
 <style scoped>
+.img-intro{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    top: 25%;
+    width: 70%;
+    right: 0;
+}
 .about::before{
     content: "";
     width: 0;
