@@ -39,7 +39,7 @@
             </ul>
         </div>
         <div class="flex justify-center my-14">
-            <router-link :to="CV" target="_blank" ><mainbutton class="mainbutton" > Download resume <fa icon="download" /></mainbutton></router-link>
+            <a :href="CV" target="_blank" ><mainbutton class="mainbutton" > Download resume <fa icon="download" /></mainbutton></a>
         </div>
     </div>
 </section>
