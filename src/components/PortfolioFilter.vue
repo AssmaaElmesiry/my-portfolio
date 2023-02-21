@@ -31,7 +31,7 @@
                     Framework
                 </label>
             </div>
-            <ul class="people-list flex flex-wrap justify-center w-full h-full ">
+            <ul class="people-list grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-4 w-full h-full ">
                 <li v-for="project in filteredProject" :key="project.id" class="card">
                     <div class="w-64 h-64 overflow-hidden rounded-lg relative">
                         <img :src=" project.Image" class=""/>
@@ -69,11 +69,11 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import img1 from "../assets/1.png"
-import img2 from "../assets/2.png"
-import img3 from "../assets/3.png"
-import img4 from "../assets/4.png"
-import img5 from "../assets/5.png"
+import img1 from "../assets/codebug.png"
+import img2 from "../assets/bot.png"
+import img3 from "../assets/mzadat.png"
+import img4 from "../assets/sms.png"
+import img5 from "../assets/qiran.svg"
 export default {
     data() {
         return {
@@ -243,7 +243,7 @@ label.active{
     transition: all 700ms ease-in-out;
 } */
 .card{
-    width: 20%;
+    width: 100%;
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -253,11 +253,11 @@ label.active{
     border-radius: 10px;
     background-color: #45BEB7;
 }
-.card img{
+/* .card img{
     transition: transform 10s ease-in-out;
 }
 .card div:hover img{
     transform: translateY(calc(-100% + 256px));
   transition: transform 10s ease-in-out;
-}
+} */
 </style>
