@@ -1,11 +1,11 @@
 <template>
         <section class="container mx-auto sm:px-20 px-4">
+                <div class="mb-6 sm:pr-32 flex flex-col justify-center">
+                        <span class="text-mainColor text-2xl font-bold mb-1">What I Do</span>
+                        <h2 class="text-white text-6xl">My Services</h2>
+                        <p class="text-lg mt-8 text-gray">i offer high quality products for competitive prices. my main goal is customer satisfaction, which i obtain through market orientation of ongoing service and support.</p>
+                </div>
                 <div class="grid gap-4 sm:grid-cols-2 grid-cols-1">
-                        <div class="mb-6 sm:pr-32 flex flex-col justify-center">
-                                <span class="text-mainColor text-2xl font-bold mb-1">What I Do</span>
-                                <h2 class="text-white text-6xl">My Services</h2>
-                                <p class="text-lg mt-8 text-gray">i offer high quality products for competitive prices. my main goal is customer satisfaction, which i obtain through market orientation of ongoing service and support.</p>
-                        </div>
                         <div v-for="service in services" :key="service.id" class=" mb-6 bg-bgHeader pt-16 pr-16 pb-14 pl-9 flex items-center rounded-md">
                                 <div>
                                         <fa :icon="service.icon" class="text-6xl text-mainColor"/>
@@ -15,10 +15,10 @@
                                         <p class="text-gray  mt-8">{{service.desc}}</p>
                                 </div>
                         </div>
-                        <div class="mb-6 px-24 font-bold text-center flex flex-col justify-center items-center">
-                                <h2 class="text-4xl text-white ">Do You Want Something Different?</h2>
-                                <mainbuttonVue class="mt-6"> Knock Me  <fa icon="envelope-open-text" class="pl-4" /></mainbuttonVue>
-                        </div>
+                </div>
+                <div class="mb-6 px-24 font-bold text-center flex flex-col justify-center items-center">
+                        <h2 class="text-4xl text-white ">Do You Want Something Different?</h2>
+                        <mainbuttonVue class="mt-6"> Knock Me  <fa icon="envelope-open-text" class="pl-4" /></mainbuttonVue>
                 </div>
         </section>
 </template>

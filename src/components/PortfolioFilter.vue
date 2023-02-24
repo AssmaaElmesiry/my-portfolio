@@ -31,10 +31,10 @@
                     Framework
                 </label>
             </div>
-            <ul class="people-list grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-4 w-full h-full ">
-                <li v-for="project in filteredProject" :key="project.id" class="card">
-                    <div class="w-64 h-64 overflow-hidden rounded-lg relative">
-                        <img :src=" project.Image" class=""/>
+            <ul class="people-list grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1  gap-4 w-full h-full ">
+                <li v-for="(project , $index) in filteredProject" :key="$index" class="card">
+                    <div class="w-64 h-64 overflow-hidden rounded-lg relative flex justify-center items-center px-6" :class="getBgColor($index)">
+                        <img :src=" project.Image" class="w-28"/>
                         <div class="absolute bottom-0 m-auto left-0 right-0 w-1/2 text-center rounded-t-lg  py-2 px-4 text-white bg-mainColor">
                             <p>{{project.title}}</p>
                         </div>
@@ -183,6 +183,7 @@ export default {
 
                 },
             ],
+            classes: ['bg-codebug', 'bg-bot', 'bg-mzadat', 'bg-sms', 'bg-qiran'],
             selectedCategory: "All",
             active_el: 1,
         }
@@ -216,10 +217,37 @@ export default {
         activate:function(el){
             this.active_el = el;
         },
+        getBgColor: function(index) {
+        // Get length of  classes array
+        let length = this.classes.length;
+
+        // Get the current turn (how many times the classes have been used from start to finish)
+        let turn = Math.floor(index / length);
+
+        // Multiply turn by the length then subtract result from current index
+        let colorIndex = index - (turn * length);
+
+        return this.classes[colorIndex];
+    }
     },
 }
 </script>
 <style>
+.bg-codebug{
+    background-color: #000;
+}
+.bg-bot{
+    background-color: #F9650A;
+}
+.bg-mzadat{
+    background-color: #2C303D;
+}
+.bg-sms{
+    background-color: #fff;
+}
+.bg-qiran{
+    background-color: #744966;
+}
 label:hover{
     color: #45BEB7;
     transition: .6s ease all;
@@ -243,7 +271,7 @@ label.active{
     transition: all 700ms ease-in-out;
 } */
 .card{
-    width: 100%;
+    /* width: 100%; */
     margin: 10px;
     padding: 10px;
     display: flex;
