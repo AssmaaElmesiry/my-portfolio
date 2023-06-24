@@ -104,7 +104,7 @@ export default {
                     code: "github",
                     desc: 'Build your bot with your feedback control panel ,Bot without the need for any technical expertise.',
                     website: "https://www.c-bot.net/",
-                    github: "www.youtube.com",
+                    github: "https://www.c-bot.net/",
                 },
                 {
                     id:3,
@@ -115,8 +115,8 @@ export default {
                     link:"link",
                     code: "github",
                     desc: "Everything you are looking for in the world of online shopping and auction.",
-                    website: "http://www.google.com",
-                    github: "www.youtube.com",
+                    website: "https://project-mzadat.vercel.app/",
+                    github: "https://github.com/AssmaaElmesiry/Project_mzadat",
                 },
                 {
                     id:4,
@@ -128,8 +128,8 @@ export default {
                     code: "github",
                     src: ('https://assmaa.commentatk-media.com/project/index.html'),
                     desc: "Our platform is full of efficient and complete tools to manage your messages.",
-                    website: "http://www.google.com",
-                    github: "www.youtube.com",
+                    website: "https://commentatk-sms.vercel.app/",
+                    github: "https://github.com/AssmaaElmesiry/commentatk-sms",
                 },
                 {
                     id:5,
@@ -165,8 +165,8 @@ export default {
                     link:"link",
                     code: "github",
                     desc: "Everything you are looking for in the world of online shopping and auction.",
-                    website: "http://www.google.com",
-                    github: "www.youtube.com",
+                    website: "https://project-mzadat.vercel.app/",
+                    github: "https://github.com/AssmaaElmesiry/Project_mzadat",
 
                 },
                 {
@@ -179,8 +179,8 @@ export default {
                     code: "github",
                     src: ('https://assmaa.commentatk-media.com/project/index.html'),
                     desc: "Our platform is full of efficient and complete tools to manage your messages.",
-                    website: "http://www.google.com",
-                    github: "www.youtube.com",
+                    website: "https://commentatk-sms.vercel.app/",
+                    github: "https://github.com/AssmaaElmesiry/commentatk-sms",
 
                 },
             ],

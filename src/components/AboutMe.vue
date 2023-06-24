@@ -4,7 +4,7 @@
         <div class="mask flex md:flex-row flex-col justify-between">
             <div class="md:w-1/2 w-full flex justify-center items-center">  
                 <div class="myphoto w-72  transition ease-in duration-300">
-                    <img src="../assets/me.png" class="" alt="porfile pic" />
+                    <img src="../assets/profile.png" class="" alt="porfile pic" />
                 </div>
             </div>
             <div class="md:w-1/2 w-full">
